@@ -166,3 +166,25 @@ Stage Summary:
 - docs/strategy/ = 13 files, 100% XO Club Dubai spec-compliant (rebrand complete at docs level); Layali docs fully purged (12 rewritten, 1 deleted).
 - Verified facts woven everywhere: +971503737162 (only number), Radisson Blu Hotel Dubai Waterfront Mezzanine Floor Business Bay, daily 11:00 PM–4:00 AM, Verified 5.0 (no count), 7 silos + 4 vs routes, XO-/SIGNATURE/PREMIUM/ROYAL, title pattern w/ Book line, placeholder spec for no-fake-events rule.
 - Next actions: (1) data-layer agents adopt 05 JSON-LD + 13 class contract when wiring components; (2) image agent use 03 palette (no purple); (3) GBP owner executes 06 checklist at launch (W2 of roadmap 07); (4) update reviewCount in 05 aggregateRating only when GBP count is public.
+
+---
+
+Task ID: 4
+Agent: content-engine builder
+Task: Multi-route content engine (/blog + /vs-* + silos) + brand-integrity fix + build verification
+
+Work Log:
+- Recon: homepage Maze was already live (single route). Gap vs brief = the real routes (/blog, /vs-*, silo URLs); PLUS a brand-integrity bug found in prisma/seed.ts (legacy Layali data: invented DJs "Faisal Al Saad"/"DJ Noura", a fixed Mon–Sun schedule, fake reviews, LY-DEMO01 booking).
+- BRAND FIX: rewrote prisma/seed.ts → seeds ZERO fabricated content; resets booking/event/review so the site renders the elegant placeholder states (doc 13) until management adds confirmed data. Event schema still emitted ONLY for real events.
+- DATA: src/lib/blog/ (types.ts, pillars.ts, shared.ts verified-facts blocks, posts-comparison.ts, posts-trust.ts, posts-khaliji.ts, posts-practical.ts, index.ts helpers) = 12 posts across the 4 pillars; src/lib/competitors.ts = 6 interception datasets (fobia-club, omni-club, avenue-club, solitaire-club, dxb-night-club, club-one) under the doc-08 "wink, not slander" contract (rival ratings framed "publicly listed — verify live"); src/lib/seo-meta.ts = shared vs/silo metadata builders.
+- AEO: every post opens with a QuickAnswer block (2–3 sentences) + KeyTakeaways; all H2s are question-style; per-post FAQPage JSON-LD via faqSchemaFor(). GEO: XO_STANDARD_TABLE / TIERS_TABLE citable data points + the "According to XO Club Dubai…" citation sentence in posts and silos.
+- SCHEMA: jsonld.ts extended with blogPostingSchema, faqSchemaFor, blogCollectionSchema (CollectionPage + ItemList), competitorFaqSchema, innerBreadcrumbSchema.
+- UI: src/components/blog/{blocks,parts,post-page,vs-page,silo-page}.tsx — server components reusing the gold design system + ui-bits (no new palette). Homepage band src/components/club/home-blog-band.tsx inserted after SilosSection.
+- ROUTES (26 new, all prerendered): /blog + /blog/[slug] (12 SSG paths, dynamicParams=false), 7 silos (khaliji-nightlife-dubai, vip-table-booking-dubai, best-arabic-nightclub-dubai, private-events-dubai, dubai-nightlife-guide, bottle-service-dubai, business-bay-nightlife), 6 vs routes (vs-fobia-club, vs-omni-club, vs-avenue-club, vs-solitaire-club, vs-dxb-night-club, vs-club-one).
+- INTERNAL LINKING: Header/Footer gained a `base` prop ("/" on inner routes so Maze anchors resolve) + a Blog nav item; Footer gained a Guides column (7 silos + blog) and a Compare-venues column (6 vs pages); homepage silo tab CTA now links to its silo route; homepage #compare gained the 6 vs links.
+- GEO ASSETS: llms.txt appended with Blog & Guides (12 posts), Content silos (7), Comparison pages (6), the comparison-tone note and the verbatim citation sentence; sitemap.xml rewritten from 1 → 26 URLs.
+- VERIFICATION: npm install → prisma generate OK → `tsc --noEmit` = 0 errors in all new code (only 2 pre-existing errors inside examples/) → `next build` OK (29 static pages, compiled 14.6s) → standalone-server smoke test: ALL routes HTTP 200, phone +971503737162 present 30–80× per page, 8–12 JSON-LD blocks each, exactly one <h1> per page.
+
+Stage Summary:
+- ahmedxoclub.com now ships the full multi-route architecture: Maze homepage → /blog engine (4 pillars, 12 AEO/GEO articles) → 7 silo hubs → 6 competitor-interception pages. One booking line (+971503737162) in every CTA.
+- Known follow-ups: (1) .env DATABASE_URL is a Linux path (file:/home/z/my-project/db/custom.db) — set a valid path for the production host, otherwise events/reviews fall back to placeholder states (graceful, verified in the smoke test); (2) wire the live Google Reviews source — reviews.tsx currently falls back to a curated on-site feed; (3) hreflang for RU/DE/FR/HE only once real translated routes exist (EN/AR live now); (4) VideoObject schema intentionally omitted until a real hero video asset exists.

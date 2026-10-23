@@ -24,7 +24,7 @@ function getSnapshot(): Lang {
   if (currentLang) return currentLang;
   let next: Lang = "en";
   try {
-    const saved = window.localStorage.getItem("layali-lang");
+    const saved = window.localStorage.getItem("xo-lang");
     const q = new URLSearchParams(window.location.search).get("lang");
     if (q === "ar" || q === "en") next = q;
     else if (saved === "ar" || saved === "en") next = saved;
@@ -42,7 +42,7 @@ function getServerSnapshot(): Lang {
 function emit(l: Lang) {
   currentLang = l;
   try {
-    window.localStorage.setItem("layali-lang", l);
+    window.localStorage.setItem("xo-lang", l);
   } catch {
     /* private mode */
   }

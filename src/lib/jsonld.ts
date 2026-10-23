@@ -5,6 +5,8 @@
  */
 import { BRAND } from "@/lib/brand";
 import { FAQS } from "@/lib/faq";
+import type { BlogPost } from "@/lib/blog/types";
+import type { Competitor } from "@/lib/competitors";
 
 const URL = BRAND.domain;
 
@@ -24,7 +26,7 @@ export function nightClubSchema() {
       `${URL}/images/vip-table.png`,
       `${URL}/images/interior.png`,
     ],
-    logo: `${URL}/logo.svg`,
+    logo: `${URL}/images/xo-club-logo-square.png`,
     priceRange: "$$$$",
     currenciesAccepted: "AED",
     paymentAccepted: "Cash, Credit Card, WhatsApp Booking",
@@ -80,7 +82,7 @@ export function organizationSchema() {
     name: BRAND.legalName,
     alternateName: BRAND.shortName,
     url: URL,
-    logo: `${URL}/logo.svg`,
+    logo: `${URL}/images/xo-club-logo-square.png`,
     telephone: BRAND.phoneRaw,
     contactPoint: {
       "@type": "ContactPoint",
@@ -211,4 +213,123 @@ export function eventsSchema(events: EventLike[]) {
       url: URL,
     },
   }));
+}
+
+/* ------------------------------------------------------------------ */
+/* Blog engine schemas — /blog and /blog/[slug]                        */
+/* ------------------------------------------------------------------ */
+
+const SITE_NAME = "XO Club Dubai";
+const PUBLISHER_ID = `${URL}/#organization`;
+
+/** BlogPosting for a single article. */
+export function blogPostingSchema(post: BlogPost) {
+  const url = `${URL}/blog/${post.slug}`;
+  return {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "@id": `${url}#article`,
+    mainEntityOfPage: { "@type": "WebPage", "@id": url },
+    headline: post.title,
+    description: post.metaDescription,
+    url,
+    datePublished: post.pubDate,
+    dateModified: post.updated ?? post.pubDate,
+    inLanguage: "en",
+    articleSection: post.pillar,
+    keywords: [post.targetKeyword, ...post.secondaryKeywords].join(", "),
+    image: [`${URL}${post.heroImage}`],
+    author: {
+      "@type": "Organization",
+      name: SITE_NAME,
+      url: URL,
+      telephone: BRAND.phoneRaw,
+    },
+    publisher: { "@id": PUBLISHER_ID },
+    about: {
+      "@type": "NightClub",
+      "@id": `${URL}/#nightclub`,
+      name: BRAND.name,
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: BRAND.address.street,
+        addressLocality: BRAND.address.city,
+        addressCountry: BRAND.address.country,
+      },
+    },
+    isAccessibleForFree: true,
+  };
+}
+
+/** Per-post FAQPage — every post ships its own AEO Q&A set. */
+export function faqSchemaFor(post: BlogPost) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "@id": `${URL}/blog/${post.slug}#faq`,
+    mainEntity: post.faqs.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  };
+}
+
+/** The /blog index as a CollectionPage + ItemList of every article. */
+export function blogCollectionSchema(posts: BlogPost[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "@id": `${URL}/blog#collection`,
+    name: "XO Club Dubai Nightlife Guides & FAQs",
+    description:
+      "Khaliji and Arabic nightlife guides, VIP table booking explainers, transparency articles and FAQ answers from XO Club Dubai — Radisson Blu Hotel, Dubai Waterfront, Business Bay. Bookings: +971503737162.",
+    url: `${URL}/blog`,
+    inLanguage: "en",
+    publisher: { "@id": PUBLISHER_ID },
+    mainEntity: {
+      "@type": "ItemList",
+      numberOfItems: posts.length,
+      itemListElement: posts.map((p, i) => ({
+        "@type": "ListItem",
+        position: i + 1,
+        name: p.title,
+        url: `${URL}/blog/${p.slug}`,
+      })),
+    },
+  };
+}
+
+/**
+ * FAQPage for a /vs-* interception page.
+ * Rival claims stay neutral — see lib/competitors.ts tone contract.
+ */
+export function competitorFaqSchema(c: Competitor) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "@id": `${URL}/vs-${c.slug}#faq`,
+    mainEntity: c.faqs.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  };
+}
+
+/** Breadcrumb trail for an inner page. */
+export function innerBreadcrumbSchema(items: { name: string; path: string }[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: URL },
+      ...items.map((it, i) => ({
+        "@type": "ListItem",
+        position: i + 2,
+        name: it.name,
+        item: `${URL}${it.path}`,
+      })),
+    ],
+  };
 }

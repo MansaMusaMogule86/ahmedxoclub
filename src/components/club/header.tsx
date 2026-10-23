@@ -5,10 +5,14 @@ import { Menu, Phone, X } from "lucide-react";
 import { useLanguage } from "@/lib/i18n";
 import { dictionaries } from "@/lib/content";
 import { BRAND } from "@/lib/brand";
-import { XoMonogram } from "@/components/club/ui-bits";
+import { BrandLogo } from "@/components/club/brand-logo";
 import { cn } from "@/lib/utils";
 
-export function Header() {
+/**
+ * `base` = "" on the homepage (hash links stay in-page) and "/" on inner
+ * routes so the same nav resolves back to the Maze hero sections.
+ */
+export function Header({ base = "" }: { base?: string }) {
   const { lang, toggle, isAr } = useLanguage();
   const t = dictionaries[lang];
   const [scrolled, setScrolled] = useState(false);
@@ -22,13 +26,14 @@ export function Header() {
   }, []);
 
   const nav = [
-    { href: "#tonight", label: t.nav.tonight },
-    { href: "#experience", label: t.nav.experience },
-    { href: "#tables", label: t.nav.tables },
-    { href: "#guides", label: t.nav.guides },
-    { href: "#reviews", label: t.nav.reviews },
-    { href: "#location", label: t.nav.location },
-    { href: "#faq", label: t.nav.faq },
+    { href: `${base}#tonight`, label: t.nav.tonight },
+    { href: `${base}#experience`, label: t.nav.experience },
+    { href: `${base}#tables`, label: t.nav.tables },
+    { href: `${base}#guides`, label: t.nav.guides },
+    { href: `${base}#reviews`, label: t.nav.reviews },
+    { href: `${base}#location`, label: t.nav.location },
+    { href: `${base}#faq`, label: t.nav.faq },
+    { href: "/blog", label: isAr ? "المدونة" : "Blog" },
   ];
 
   return (
@@ -40,15 +45,20 @@ export function Header() {
     >
       <div className="mx-auto flex h-[72px] max-w-7xl items-center justify-between gap-3 px-4 sm:px-6">
         {/* Logo */}
-        <a href="#top" className="flex items-center gap-3" aria-label="XO Club Dubai — home">
-          <XoMonogram />
-          <span className="flex flex-col leading-none">
-            <span className="font-logo text-lg font-bold tracking-[0.14em]">
-              <span className="text-gold">XO</span> <span className="text-cream">CLUB</span>
-            </span>
-            <span className="text-[9px] font-semibold tracking-[0.42em] text-gold/80">
-              {isAr ? "دبي" : "DUBAI"}
-            </span>
+        {/* TOP-LEFT BRAND MARK — the new AHMED XO CLUB crown logo.
+            The artwork already contains the wordmark, so no duplicate text
+            lockup sits beside it (the previous XO monogram + "XO CLUB/DUBAI"
+            text block was replaced). An sr-only line keeps the accessible name. */}
+        <a
+          href={`${base}#top`}
+          className="flex shrink-0 items-center"
+          aria-label="XO Club Dubai — home"
+        >
+          <BrandLogo className="h-[50px] sm:h-[54px]" priority />
+          <span className="sr-only">
+            {isAr
+              ? "إكس أو كلوب دبي — وجهة السهر الخليجي والعربي"
+              : "XO Club Dubai — Dubai's Khaliji & Arabic nightclub"}
           </span>
         </a>
 
@@ -95,7 +105,7 @@ export function Header() {
           </button>
 
           <a
-            href="#booking"
+            href={`${base}#booking`}
             className="hidden h-11 items-center rounded-full bg-gold-gradient px-5 text-sm font-bold text-night shadow-[0_8px_28px_-8px_rgba(212,175,55,0.6)] transition hover:brightness-110 sm:inline-flex"
           >
             {t.nav.book}
@@ -122,7 +132,7 @@ export function Header() {
             onClick={(e) => e.stopPropagation()}
           >
             <div className="mb-4 flex items-center justify-between">
-              <span className="font-logo text-lg font-bold tracking-[0.14em] text-gold">XO CLUB</span>
+              <BrandLogo className="h-10" />
               <button
                 onClick={() => setOpen(false)}
                 className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-gold/30 text-cream"
@@ -145,7 +155,7 @@ export function Header() {
             </nav>
             <div className="mt-4 flex flex-col gap-3">
               <a
-                href="#booking"
+                href={`${base}#booking`}
                 onClick={() => setOpen(false)}
                 className="inline-flex h-12 items-center justify-center rounded-full bg-gold-gradient font-bold text-night"
               >

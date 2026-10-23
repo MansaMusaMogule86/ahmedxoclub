@@ -5,7 +5,8 @@ import { useLanguage } from "@/lib/i18n";
 import { dictionaries } from "@/lib/content";
 import { WA_MESSAGES } from "@/lib/brand";
 import { Reveal } from "@/components/club/reveal";
-import { SectionHead, WhatsAppButton, XoMonogram } from "@/components/club/ui-bits";
+import { SectionHead, WhatsAppButton } from "@/components/club/ui-bits";
+import { BrandLogo } from "@/components/club/brand-logo";
 
 export function Compare() {
   const { isAr } = useLanguage();
@@ -25,7 +26,7 @@ export function Compare() {
             <div className="grid grid-cols-[1fr] sm:grid-cols-[0.9fr_1.1fr_1fr] border-b border-gold/20 bg-night-soft/70">
               <div className="hidden sm:block" aria-hidden="true" />
               <div className="flex items-center gap-3 border-gold/20 px-5 py-4 sm:border-e">
-                <XoMonogram className="h-9 w-9" />
+                <BrandLogo className="h-10 shrink-0" />
                 <p className="text-sm font-black uppercase tracking-[0.14em] text-gold-light">
                   {t.compare.colXo}
                 </p>
@@ -60,6 +61,34 @@ export function Compare() {
                 </div>
               </div>
             ))}
+          </div>
+        </Reveal>
+
+        {/* Deep-dive comparison pages (competitor interception routes) */}
+        <Reveal delay={0.12}>
+          <div className="mt-8">
+            <p className="text-center text-[11px] font-bold uppercase tracking-[0.24em] text-cream/45">
+              {isAr ? "مقارنات موسّعة" : "Full comparisons"}
+            </p>
+            <ul className="mt-4 flex flex-wrap justify-center gap-2">
+              {[
+                ["/vs-fobia-club", "XO vs Fobia Night Club"],
+                ["/vs-omni-club", "XO vs Omni Club"],
+                ["/vs-avenue-club", "XO vs The Avenue Club"],
+                ["/vs-solitaire-club", "XO vs Solitaire Club"],
+                ["/vs-dxb-night-club", "XO vs DXB Night Club"],
+                ["/vs-club-one", "XO vs Club One"],
+              ].map(([href, label]) => (
+                <li key={href}>
+                  <a
+                    href={href}
+                    className="rounded-full border border-gold/20 px-4 py-2 text-xs font-semibold text-cream/70 transition hover:border-gold/50 hover:text-gold"
+                  >
+                    {label}
+                  </a>
+                </li>
+              ))}
+            </ul>
           </div>
         </Reveal>
 

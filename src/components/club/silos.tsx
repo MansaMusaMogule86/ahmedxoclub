@@ -120,9 +120,11 @@ export function SilosSection() {
                 </div>
 
                 <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:items-center">
+                  {/* Links into the dedicated silo route (full pillar guide) */}
                   <a
-                    href="#booking"
+                    href={`/${silo.slug}`}
                     className="inline-flex h-12 flex-1 items-center justify-center gap-2 rounded-full bg-gold-gradient text-sm font-bold text-night transition hover:brightness-110"
+                    aria-label={`${t.guides.jumpIn}: ${isAr ? silo.ar.title : silo.en.title}`}
                   >
                     {t.guides.jumpIn}
                     <ArrowRight className="h-4 w-4 rtl:rotate-180" aria-hidden="true" />

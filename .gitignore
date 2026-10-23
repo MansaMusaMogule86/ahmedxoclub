@@ -37,6 +37,10 @@ yarn-error.log*
 .vercel
 
 
+# lockfile — this project uses bun (bun.lock) as the package manager of record
+/package-lock.json
+npm-shrinkwrap.json
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts

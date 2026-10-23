@@ -18,6 +18,7 @@ import { Music } from "@/components/club/music";
 import { Pricing } from "@/components/club/pricing";
 import { EventsSection, type EventCard } from "@/components/club/events";
 import { SilosSection } from "@/components/club/silos";
+import { HomeBlogBand } from "@/components/club/home-blog-band";
 import { Compare } from "@/components/club/compare";
 import { Gallery } from "@/components/club/gallery";
 import { Reviews, type ReviewCard } from "@/components/club/reviews";
@@ -123,6 +124,9 @@ export default async function Home() {
 
         {/* LAYER 2 — THE CORRIDORS (7 SEO silos as on-page authority hubs) */}
         <SilosSection />
+
+        {/* THE CONTENT ENGINE — links the Maze into /blog, /vs-* and the silos */}
+        <HomeBlogBand />
 
         {/* LAYER 3 — THE TRAPS (competitor interception, on-page) */}
         <Compare />

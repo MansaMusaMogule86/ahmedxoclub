@@ -332,3 +332,10 @@ export const SILOS: Silo[] = [
     },
   },
 ];
+
+/** Strict lookup for the static silo routes (throws if the slug is unknown). */
+export function requireSilo(slug: string): Silo {
+  const s = SILOS.find((x) => x.slug === slug);
+  if (!s) throw new Error(`Unknown silo slug: ${slug}`);
+  return s;
+}

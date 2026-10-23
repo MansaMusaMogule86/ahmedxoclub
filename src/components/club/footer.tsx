@@ -4,38 +4,55 @@ import { Clock, MapPin, Phone } from "lucide-react";
 import { useLanguage } from "@/lib/i18n";
 import { dictionaries } from "@/lib/content";
 import { BRAND } from "@/lib/brand";
-import { XoMonogram } from "@/components/club/ui-bits";
+import { BrandLogo } from "@/components/club/brand-logo";
 
-export function Footer() {
+/** `base` = "" on the homepage, "/" on inner routes (absolute Maze links). */
+export function Footer({ base = "" }: { base?: string }) {
   const { isAr } = useLanguage();
   const t = dictionaries[isAr ? "ar" : "en"];
   const year = 2026;
 
   const explore = [
-    { href: "#tonight", label: t.nav.tonight },
-    { href: "#experience", label: t.nav.experience },
-    { href: "#tables", label: t.nav.tables },
-    { href: "#events", label: t.nav.events },
-    { href: "#guides", label: t.nav.guides },
-    { href: "#reviews", label: t.nav.reviews },
-    { href: "#faq", label: t.nav.faq },
+    { href: `${base}#tonight`, label: t.nav.tonight },
+    { href: `${base}#experience`, label: t.nav.experience },
+    { href: `${base}#tables`, label: t.nav.tables },
+    { href: `${base}#events`, label: t.nav.events },
+    { href: `${base}#guides`, label: t.nav.guides },
+    { href: `${base}#reviews`, label: t.nav.reviews },
+    { href: `${base}#faq`, label: t.nav.faq },
+  ];
+
+  /* Content engine — silos, comparison pages and the blog (internal linking). */
+  const guides = [
+    { href: "/khaliji-nightlife-dubai", label: isAr ? "دليل السهر الخليجي" : "Khaliji nightlife guide" },
+    { href: "/vip-table-booking-dubai", label: isAr ? "حجز طاولات VIP" : "VIP table booking" },
+    { href: "/best-arabic-nightclub-dubai", label: isAr ? "أفضل نادي عربي" : "Best Arabic nightclub" },
+    { href: "/private-events-dubai", label: isAr ? "المناسبات الخاصة" : "Private events" },
+    { href: "/dubai-nightlife-guide", label: isAr ? "دليل سهر دبي" : "Dubai nightlife guide" },
+    { href: "/bottle-service-dubai", label: isAr ? "خدمة القوارير" : "Bottle service" },
+    { href: "/business-bay-nightlife", label: isAr ? "سهر الخليج التجاري" : "Business Bay nightlife" },
+    { href: "/blog", label: isAr ? "المدونة والأدلة" : "Blog & guides" },
+  ];
+
+  const compares = [
+    { href: "/vs-fobia-club", label: isAr ? "إكس أو ضد فوبيا" : "XO vs Fobia Night Club" },
+    { href: "/vs-omni-club", label: isAr ? "إكس أو ضد أومني" : "XO vs Omni Club" },
+    { href: "/vs-avenue-club", label: isAr ? "إكس أو ضد أفنيو" : "XO vs The Avenue Club" },
+    { href: "/vs-solitaire-club", label: isAr ? "إكس أو ضد سوليتير" : "XO vs Solitaire Club" },
+    { href: "/vs-dxb-night-club", label: isAr ? "إكس أو ضد DXB" : "XO vs DXB Night Club" },
+    { href: "/vs-club-one", label: isAr ? "إكس أو ضد كلوب وون" : "XO vs Club One" },
   ];
 
   return (
     <footer className="mt-auto border-t border-gold/15 bg-night-soft" aria-label="Footer">
       <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6">
-        <div className="grid gap-10 lg:grid-cols-[1.3fr_0.8fr_1.1fr]">
+        <div className="grid gap-10 lg:grid-cols-[1.2fr_0.7fr_1fr_1fr]">
           {/* Brand */}
           <div>
-            <div className="flex items-center gap-3">
-              <XoMonogram />
-              <span className="flex flex-col leading-none">
-                <span className="font-logo text-xl font-bold tracking-[0.14em]">
-                  <span className="text-gold">XO</span> <span className="text-cream">CLUB</span>
-                </span>
-                <span className="text-[9px] font-semibold tracking-[0.42em] text-gold/80">
-                  {isAr ? "دبي" : "DUBAI"}
-                </span>
+            <div className="flex flex-col gap-3">
+              <BrandLogo className="h-[76px] sm:h-[84px]" />
+              <span className="text-[10px] font-semibold uppercase tracking-[0.42em] text-gold/80">
+                {isAr ? "إكس أو كلوب · دبي" : "Dubai · Business Bay"}
               </span>
             </div>
             <p className="mt-4 max-w-md text-sm leading-relaxed text-cream/60" dir="auto">
@@ -53,6 +70,34 @@ export function Footer() {
             </h3>
             <ul className="mt-4 space-y-2.5">
               {explore.map((l) => (
+                <li key={l.href}>
+                  <a href={l.href} className="text-sm text-cream/65 transition hover:text-gold">
+                    {l.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+
+          {/* Guides (silos + blog) */}
+          <nav aria-label={t.footer.guides}>
+            <h3 className="text-[11px] font-bold uppercase tracking-[0.26em] text-gold/85">
+              {t.footer.guides}
+            </h3>
+            <ul className="mt-4 space-y-2.5">
+              {guides.map((l) => (
+                <li key={l.href}>
+                  <a href={l.href} className="text-sm text-cream/65 transition hover:text-gold">
+                    {l.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+            <h3 className="mt-7 text-[11px] font-bold uppercase tracking-[0.26em] text-gold/85">
+              {isAr ? "المقارنات" : "Compare venues"}
+            </h3>
+            <ul className="mt-4 space-y-2.5">
+              {compares.map((l) => (
                 <li key={l.href}>
                   <a href={l.href} className="text-sm text-cream/65 transition hover:text-gold">
                     {l.label}
@@ -94,7 +139,7 @@ export function Footer() {
               </p>
             </address>
             <a
-              href="#booking"
+              href={`${base}#booking`}
               className="mt-5 inline-flex h-11 items-center rounded-full bg-gold-gradient px-6 text-sm font-bold text-night transition hover:brightness-110"
             >
               {t.footer.reservations.replace("+971 50 373 7162", "")}

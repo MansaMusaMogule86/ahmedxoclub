@@ -98,7 +98,7 @@ export const metadata: Metadata = {
     },
   },
   manifest: "/manifest.json",
-  icons: { icon: "/icon.svg", apple: "/icon.svg" },
+  icons: { icon: "/icon.svg", apple: "/images/xo-club-logo-square.png" },
   category: "nightlife",
 };
 

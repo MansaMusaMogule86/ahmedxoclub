@@ -107,3 +107,36 @@ Phases: **P1** = live Maze · **P2** = pillars + vs + /book · **P3** = /events,
 4. Vs-pages link the rival-named H1 → comparison table → booking CTA; never link out to competitors.
 5. Phone NAP block (address + +971 50 373 7162 + hours) is a shared footer component on every route.
 6. No orphan pages: new URL ships with ≥3 inbound internal links on publish day.
+
+## E. IMPLEMENTED — Multi-Route Content Engine (live in the build)
+
+The single-page constraint is lifted: the Maze stays the conversion core at `/`, and the content engine now ships as real routes (see worklog Task ID 4). `next build` prerenders 29 pages.
+
+```
+/                              Maze (dynamic: DB events/reviews → placeholder fallback)
+├── /blog .................... CollectionPage + ItemList; 4 pillar sections
+│   └── /blog/[slug] ......... 12 posts, SSG (dynamicParams=false)
+│                              Pillar 1 comparisons: xo-club-vs-fobia-night-club ·
+│                              xo-club-vs-avenue-club · xo-club-vs-omni-club ·
+│                              xo-club-vs-dxb-night-club
+│                              Pillar 2 trust: how-much-does-a-night-at-xo-club-cost ·
+│                              is-xo-club-safe-anti-scam-policy
+│                              Pillar 3 khaliji: what-is-authentic-khaliji-nightlife ·
+│                              best-arabic-nightclubs-business-bay
+│                              Pillar 4 practical: dress-code-at-xo-club-dubai ·
+│                              do-i-need-a-reservation-for-vip-tables ·
+│                              is-there-a-ladies-night-at-xo-club ·
+│                              how-to-book-a-vip-table-at-xo-club
+├── /khaliji-nightlife-dubai ......... silo 1 (SSG)
+├── /vip-table-booking-dubai ......... silo 2 (SSG)
+├── /best-arabic-nightclub-dubai ..... silo 3 (SSG)
+├── /private-events-dubai ............ silo 4 (SSG)
+├── /dubai-nightlife-guide ........... silo 5 (SSG)
+├── /bottle-service-dubai ............ silo 6 (SSG)
+├── /business-bay-nightlife .......... silo 7 (SSG)
+├── /vs-fobia-club · /vs-omni-club · /vs-avenue-club ·
+│   /vs-solitaire-club · /vs-dxb-night-club · /vs-club-one ... interception (SSG)
+└── /api/bookings · /api/events · /api/reviews (dynamic)
+```
+
+Every content page ships: Quick Answer block → question-style H2s → citable facts table → FAQ (visible + FAQPage JSON-LD) → CTA with `+971503737162` (WhatsApp deep link + click-to-call).
