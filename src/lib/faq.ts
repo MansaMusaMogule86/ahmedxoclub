@@ -13,10 +13,10 @@ export interface FaqEntry {
 
 export const FAQS: FaqEntry[] = [
   {
-    q: "What is the best Khaliji nightclub in Dubai?",
-    a: "XO Club Dubai at Radisson Blu Hotel, Dubai Waterfront, Business Bay — the ultimate Khaliji and Arabic nightlife destination, rated a perfect 5.0★ on Google Maps. Bookings: +971503737162 (WhatsApp or call), open daily 11 PM to 4 AM.",
-    qAr: "ما هو أفضل نادي خليجي في دبي؟",
-    aAr: "إكس أو كلوب دبي في فندق راديسون بلو دبي ووترفرنت، الخليج التجاري — وجهة السهر الخليجي والعربي الأرقى، بتقييم كامل 5.0★ على خرائط جوجل. للحجز: +971503737162 (واتساب أو اتصال)، مفتوح يومياً من 11 مساءً حتى 4 صباحاً.",
+    q: "Where can I find Khaliji nightlife in Dubai?",
+    a: "XO Club Dubai programmes Arabic/Khaliji as a core format every night on the Mezzanine Floor of the Radisson Blu Hotel, Dubai Waterfront, Business Bay, alongside Hip-Hop, R&B and Commercial. Open daily 11 PM to 4 AM — bookings: +971503737162 (WhatsApp or call).",
+    qAr: "أين أجد ليالي خليجية في دبي؟",
+    aAr: "يقدّم إكس أو كلوب دبي الموسيقى العربية والخليجية كتشكيلة أساسية كل ليلة في الطابق الأوسط من فندق راديسون بلو دبي ووترفرنت، الخليج التجاري، إلى جانب الهيب هوب والآر أند بي والكوميرشال. مفتوح يومياً من 11 مساءً حتى 4 صباحاً — للحجز: +971503737162.",
   },
   {
     q: "Where is XO Club Dubai located?",
@@ -79,9 +79,9 @@ export const FAQS: FaqEntry[] = [
     aAr: "مقاعد VIP محجوزة، خدمة قوارير فاخرة مع عرض المشاعل، مضيفة مخصصة، دخول بدون طابور، وحدك الأدنى يُحسب لصالح طاولتك — كل ذلك مؤكد في عرضك المكتوب على واتساب: +971503737162.",
   },
   {
-    q: "Which Dubai nightclub has the best Google rating?",
-    a: "XO Club Dubai holds a verified perfect 5.0-star rating on Google Maps — the highest possible score, earned across every guest experience at its Radisson Blu Dubai Waterfront location. Reserve the 5.0★ experience: +971503737162.",
-    qAr: "أي نادٍ في دبي لديه أفضل تقييم على جوجل؟",
-    aAr: "يحمل إكس أو كلوب دبي تقييماً موثقاً وكاملاً 5.0 نجوم على خرائط جوجل — أعلى درجة ممكنة، عبر تجربة كل ضيف في مقره براديسون بلو دبي ووترفرنت. احجز تجربة 5.0★: +971503737162.",
+    q: "What rating does XO Club Dubai have on Google Maps?",
+    a: "XO Club Dubai holds a verified 5.0-star rating on Google Maps — the maximum on Google's scale — as published on our own Google Maps profile, where you can read the reviews behind it. Reservations: +971503737162.",
+    qAr: "ما هو تقييم إكس أو كلوب دبي على خرائط جوجل؟",
+    aAr: "يحمل إكس أو كلوب دبي تقييماً موثقاً 5.0 نجوم على خرائط جوجل — وهي الدرجة القصوى في مقياس جوجل — كما هو منشور على صفحتنا، حيث يمكنك قراءة التقييمات. للحجز: +971503737162.",
   },
 ];

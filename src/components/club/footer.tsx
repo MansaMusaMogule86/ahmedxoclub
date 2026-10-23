@@ -32,17 +32,14 @@ export function Footer({ base = "" }: { base?: string }) {
     { href: "/dubai-nightlife-guide", label: isAr ? "دليل سهر دبي" : "Dubai nightlife guide" },
     { href: "/bottle-service-dubai", label: isAr ? "خدمة القوارير" : "Bottle service" },
     { href: "/business-bay-nightlife", label: isAr ? "سهر الخليج التجاري" : "Business Bay nightlife" },
+    { href: "/dubai-nightclub-entertainment", label: isAr ? "فنون السهر في دبي" : "Nightclub entertainment" },
+    { href: "/nightclub-reservations-dubai", label: isAr ? "حجوزات النوادي" : "Nightclub reservations" },
+    { href: "/xo-club-experience", label: isAr ? "تجربة إكس أو" : "The XO experience" },
     { href: "/blog", label: isAr ? "المدونة والأدلة" : "Blog & guides" },
   ];
 
-  const compares = [
-    { href: "/vs-fobia-club", label: isAr ? "إكس أو ضد فوبيا" : "XO vs Fobia Night Club" },
-    { href: "/vs-omni-club", label: isAr ? "إكس أو ضد أومني" : "XO vs Omni Club" },
-    { href: "/vs-avenue-club", label: isAr ? "إكس أو ضد أفنيو" : "XO vs The Avenue Club" },
-    { href: "/vs-solitaire-club", label: isAr ? "إكس أو ضد سوليتير" : "XO vs Solitaire Club" },
-    { href: "/vs-dxb-night-club", label: isAr ? "إكس أو ضد DXB" : "XO vs DXB Night Club" },
-    { href: "/vs-club-one", label: isAr ? "إكس أو ضد كلوب وون" : "XO vs Club One" },
-  ];
+  /* The "Compare venues" list was removed with the competitor comparison
+     content (archive/competitor-comparison/README.md). */
 
   return (
     <footer className="mt-auto border-t border-gold/15 bg-night-soft" aria-label="Footer">
@@ -87,18 +84,6 @@ export function Footer({ base = "" }: { base?: string }) {
             </h3>
             <ul className="mt-4 space-y-2.5">
               {guides.map((l) => (
-                <li key={l.href}>
-                  <a href={l.href} className="text-sm text-cream/65 transition hover:text-gold">
-                    {l.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
-            <h3 className="mt-7 text-[11px] font-bold uppercase tracking-[0.26em] text-gold/85">
-              {isAr ? "المقارنات" : "Compare venues"}
-            </h3>
-            <ul className="mt-4 space-y-2.5">
-              {compares.map((l) => (
                 <li key={l.href}>
                   <a href={l.href} className="text-sm text-cream/65 transition hover:text-gold">
                     {l.label}

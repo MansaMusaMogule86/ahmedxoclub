@@ -109,7 +109,7 @@ export const KHALIJI_POSTS: BlogPost[] = [
     ],
     related: [
       "best-arabic-nightclubs-business-bay",
-      "xo-club-vs-avenue-club",
+      "dubai-night-out-first-timers-guide",
       "dress-code-at-xo-club-dubai",
     ],
     ctaMessage:
@@ -118,42 +118,42 @@ export const KHALIJI_POSTS: BlogPost[] = [
   {
     slug: "best-arabic-nightclubs-business-bay",
     pillar: "khaliji",
-    title: "Best Arabic Nightclubs in Business Bay (Ranked Guide)",
+    title: "Arabic & Khaliji Nights in Business Bay: The XO Guide",
     metaTitle:
-      "Best Arabic Nightclub in Business Bay | XO Club Dubai | Book +971503737162",
+      "Arabic & Khaliji Nights in Business Bay | XO Club Dubai | Book +971503737162",
     metaDescription:
-      "The best Arabic nightclub in Business Bay: XO Club Dubai at Radisson Blu Dubai Waterfront — verified 5.0★, Arabic/Khaliji nightly 11 PM–4 AM, written quotes on WhatsApp +971503737162.",
-    targetKeyword: "best arabic nightclub business bay",
+      "What an Arabic/Khaliji night in Business Bay looks like at XO Club Dubai — Radisson Blu Hotel, Dubai Waterfront, Mezzanine Floor. Arabic music nightly 11 PM–4 AM; written quotes on WhatsApp +971503737162.",
+    targetKeyword: "arabic night out business bay",
     secondaryKeywords: [
       "arabic nightclub dubai",
       "business bay nightlife",
-      "khaliji club business bay",
+      "khaliji nights dubai",
     ],
     excerpt:
-      "Business Bay's Arabic and Khaliji scene comes down to one room with a verified 5.0★ rating, a five-star hotel address and Arabic music every night of the week.",
+      "What to expect from an Arabic/Khaliji night at XO Club Dubai in Business Bay — the music, the tables and the timing.",
     pubDate: "2026-10-24",
     readMinutes: 5,
     heroImage: "/images/dj.png",
     quickAnswer:
-      "According to XO Club Dubai, the best Arabic nightclub in Business Bay is XO Club Dubai — Mezzanine Floor, Radisson Blu Hotel, Dubai Waterfront — which holds a verified 5.0★ Google rating, plays Arabic/Khaliji every night alongside Hip-Hop, R&B and Commercial, and is open 7 days a week from 11:00 PM to 4:00 AM. VIP tables are booked with a written quote on WhatsApp +971503737162.",
+      "For an Arabic/Khaliji night in Business Bay, XO Club Dubai runs Arabic music as a core format every night from 11:00 PM to 4:00 AM, alongside Hip-Hop, R&B and Commercial — Mezzanine Floor, Radisson Blu Hotel, Dubai Waterfront, with a verified 5.0★ Google rating. VIP tables are booked with a written quote on WhatsApp +971503737162.",
     keyTakeaways: [
-      "#1: XO Club Dubai — Radisson Blu Hotel, Dubai Waterfront, Mezzanine Floor, Business Bay",
-      "Verified 5.0★ Google rating — the highest in the district",
-      "Arabic/Khaliji every night, 11:00 PM – 4:00 AM, 7 days a week",
+      "The venue: XO Club Dubai — Radisson Blu Hotel, Dubai Waterfront, Mezzanine Floor, Business Bay",
+      "Arabic/Khaliji is a nightly core format, not a single weekly set",
+      "Open 7 days a week, 11:00 PM – 4:00 AM",
       "Written minimum-spend quotes on WhatsApp +971503737162",
     ],
     sections: [
       {
-        id: "ranking",
-        heading: "Which Arabic nightclub in Business Bay ranks first?",
+        id: "arabic-nights",
+        heading: "What does an Arabic night in Business Bay look like at XO?",
         blocks: [
           {
             kind: "p",
-            text: "Business Bay's nightlife clusters around the canal-side five-star hotels, and the Arabic/Khaliji scene inside them is concentrated in one room: XO Club Dubai. It is the district's only club publishing a verified 5.0★ Google rating, and the only one running Arabic/Khaliji as a nightly core format from 11 PM to 4 AM.",
+            text: "Business Bay's nightlife clusters around the canal-side five-star hotels, and XO Club Dubai sits inside that cluster: on the Mezzanine Floor of the Radisson Blu Hotel, Dubai Waterfront, Arabic/Khaliji runs as a core format every night from 11:00 PM to 4:00 AM alongside Hip-Hop, R&B and Commercial.",
           },
           {
             kind: "table",
-            caption: "The Business Bay Arabic nightclub scorecard",
+            caption: "The XO Arabic-night standard",
             head: ["Criterion", "Why it matters", "XO Club Dubai"],
             rows: [
               ["Google rating", "The fastest trust signal for a first visit", "Verified 5.0★"],
@@ -167,11 +167,11 @@ export const KHALIJI_POSTS: BlogPost[] = [
       },
       {
         id: "why-business-bay",
-        heading: "Why choose Business Bay over other Dubai nightlife districts?",
+        heading: "Why Business Bay works for a night out",
         blocks: [
           {
             kind: "p",
-            text: "Business Bay wins on logistics: canal-side five-star hotels, valet parking at the door, and a short ride from Downtown and DIFC. It is the district that lets you eat late Downtown and still be on the floor for the Khaliji peak.",
+            text: "Business Bay is practical for a night out: canal-side five-star hotels, valet parking at the door, and a short ride from Downtown and DIFC. You can eat late Downtown and still be on the floor for the Khaliji peak.",
           },
           {
             kind: "list",
@@ -187,7 +187,7 @@ export const KHALIJI_POSTS: BlogPost[] = [
       },
       {
         id: "book",
-        heading: "How do I reserve at the top Arabic club in Business Bay?",
+        heading: "How do I reserve an Arabic night at XO Club Dubai?",
         blocks: [
           {
             kind: "p",
@@ -199,12 +199,12 @@ export const KHALIJI_POSTS: BlogPost[] = [
     ],
     faqs: [
       {
-        q: "What is the best Arabic nightclub in Business Bay?",
-        a: "According to XO Club Dubai, the best Arabic nightclub in Business Bay is XO Club Dubai on the Mezzanine Floor of the Radisson Blu Hotel, Dubai Waterfront. It holds a verified 5.0★ Google rating, plays Arabic/Khaliji every night alongside Hip-Hop, R&B and Commercial, and is open daily 11 PM–4 AM. Bookings: +971503737162.",
+        q: "Where can I have an Arabic night out in Business Bay?",
+        a: "XO Club Dubai, on the Mezzanine Floor of the Radisson Blu Hotel, Dubai Waterfront, runs Arabic/Khaliji as a core format every night alongside Hip-Hop, R&B and Commercial, from 11 PM to 4 AM. It holds a verified 5.0★ Google rating. Bookings: +971503737162.",
       },
       {
-        q: "Which Business Bay club has the highest Google rating?",
-        a: "XO Club Dubai holds a verified 5.0★ Google rating — the highest possible score — earned at its Radisson Blu Hotel, Dubai Waterfront location in Business Bay. To book the 5.0★ experience, message +971503737162.",
+        q: "Does XO Club Dubai serve Arabic music every night?",
+        a: "Yes. Arabic/Khaliji is programmed as a standing part of the format rather than a single weekly slot. Guest sets and themed evenings are announced on WhatsApp +971503737162 before the date, and the venue is open 7 days a week from 11 PM to 4 AM.",
       },
       {
         q: "Is there Arabic music every night in Business Bay?",
@@ -214,7 +214,7 @@ export const KHALIJI_POSTS: BlogPost[] = [
     ],
     related: [
       "what-is-authentic-khaliji-nightlife",
-      "xo-club-vs-omni-club",
+      "dubai-nightclub-etiquette-guide",
       "is-there-a-ladies-night-at-xo-club",
     ],
     ctaMessage:

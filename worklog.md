@@ -210,3 +210,26 @@ Work Log:
 Stage Summary:
 - Homepage order: video Hero → Step into XO → trust bar → tonight → why XO → music → VIP tables → VIP & experiences → events → entertainment → guides → blog → compare → gallery → reviews → location → booking → FAQ → final CTA.
 - Owner actions outstanding: (1) the 39 MB hero MP4 and 3 MB entrance webp should be re-encoded / served from a CDN (ffmpeg absent here; target ~4-6 MB, 1080x1920, CRF 26) or tracked via Git LFS; (2) approve or replace the five experience photos and the six performer photos; (3) confirm the hero video's phone crop is acceptable before launch.
+
+---
+
+Task ID: 6
+Agent: main
+Task: LEGAL-SAFE SEO CLEANUP — audit and unpublish competitor-targeted content, replace with first-party SEO
+Status: committed locally, NOT pushed / NOT deployed (client approval required)
+
+Work Log:
+- AUDIT (full codebase sweep for competitor names, comparison tables, comparative headlines, metadata, structured data, internal links, sitemap entries, superlatives):
+  * 6 competitor-named routes: /vs-fobia-club, /vs-omni-club, /vs-avenue-club, /vs-solitaire-club, /vs-dxb-night-club, /vs-club-one
+  * 4 competitor-named blog posts: /blog/xo-club-vs-{fobia,omni,avenue,dxb}-*
+  * support files: src/lib/competitors.ts (rival names, star ratings, "service complaints", "at a glance" tables, "[rival] alternative" target keywords), src/components/blog/vs-page.tsx, posts-comparison.ts, vsMetadata(), competitorFaqSchema(), homepage #compare ("XO vs. The Rest" + an unnamed-competitor column with unverified negative claims), footer "Compare venues" column, a silo-page related link, 4 cross-post related links, 10 sitemap URLs, llms.txt competitor sections
+  * additional risk found (no competitor named): self-ranking superlatives in retained content ("the highest in the district", "the district's only club", "Which Dubai nightclub has the best Google rating?", "Ranked Guide", "every other Dubai club gets compared to", "Most don't [play Arabic music]"), and 6 invented attributed testimonials in reviews.tsx
+- UNPUBLISH: moved routes + data + template to archive/competitor-comparison/ (with README documenting what/why/how to restore); tsconfig + eslint exclude `archive`; removed every import, nav entry, footer link, internal link, featured slug, sitemap URL and llms.txt reference.
+- 410 GONE: src/proxy.ts (Next 16 renamed middleware→proxy; verified against the official migration doc) returns HTTP 410 for all 10 retired URLs with a branded noindex body. 410 chosen over 301 because no genuinely equivalent first-party replacement exists. Deliberately NOT robots-disallowed (a Disallow would hide the 410 from crawlers and delay de-indexing) — documented in robots.txt.
+- FIRST-PARTY REPLACEMENTS: new pillar "Dubai Nightlife Planning" with 2 new posts (first-timer guide, etiquette guide) replacing the 4 comparison posts; 3 new silo pages: /dubai-nightclub-entertainment, /nightclub-reservations-dubai, /xo-club-experience. All 7 focus subjects of the brief now have a distinct first-party page: dubai-nightlife-guide, business-bay-nightlife, vip-table-booking-dubai, private-events-dubai, dubai-nightclub-entertainment, nightclub-reservations-dubai, xo-club-experience.
+- CLAIM REMEDIATION in retained content: /best-arabic-nightclub-dubai silo rewritten (was "Why XO Leads", told readers to test "any competitor", claimed others "don't" play Arabic music); ranked blog post retitled to "Arabic & Khaliji Nights in Business Bay" and de-ranked; 2 FAQPage entries rewritten ("best Khaliji nightclub", "best Google rating"); content.ts EN+AR `compare` dictionary block DELETED (unverified negative claims) and the section rebuilt as single-column first-party facts; why-section comparative lines softened (EN+AR); invented reviews removed — the reviews section now shows only approved DB reviews or links to Google.
+- VERIFICATION: tsc clean (only 2 pre-existing examples/ errors); next build exit 0 with 24/24 static pages and no deprecation warning; live HTTP — all 10 retired URLs 410, all 14 first-party routes 200, /vs-fobia-club/ chains 308→410, sitemap.xml + robots.txt 200; audit — 0 competitor names in public/ and 0 in src/ (outside the proxy URL match list), 0 competitor names or superlatives in rendered HTML of 6 sampled pages; npm run check:assets OK.
+
+Stage Summary:
+- No competitor is named anywhere public, no comparison table remains, no superiority claim about a named venue remains, and no page publishes an invented review. Retired URLs are 410 Gone; sources are archived out of the served tree and were not deleted.
+- NOT DEPLOYED: changes are committed locally only. Do not push to origin/main (and therefore do not trigger a production deploy) until the client approves.

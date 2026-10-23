@@ -138,7 +138,7 @@ export default async function Home() {
         {/* THE CONTENT ENGINE — links the Maze into /blog, /vs-* and the silos */}
         <HomeBlogBand />
 
-        {/* LAYER 3 — THE TRAPS (competitor interception, on-page) */}
+        {/* LAYER 3 — THE TRAPS (first-party published standards, no competitor claims) */}
         <Compare />
 
         {/* SOCIAL PROOF STACK */}

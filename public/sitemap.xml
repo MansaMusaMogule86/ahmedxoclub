@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  XO Club Dubai (ahmedxoclub.com) — full multi-route architecture.
+  XO Club Dubai (ahmedxoclub.com) — first-party content only.
+
+  RETIRED CONTENT: the former named-competitor comparison pages and comparison
+  blog posts have been permanently removed for legal review. Those URLs now
+  return HTTP 410 Gone (deliberately not redirected, and deliberately not
+  robots-disallowed so crawlers observe the 410 and de-index). This sitemap
+  lists first-party pages only, and the source files are preserved out of the
+  served tree at archive/competitor-comparison/.
+
   Booking (the ONLY number): +971503737162
-  Verified facts: Radisson Blu Hotel, Dubai Waterfront, Mezzanine Floor, Business Bay |
-  daily 11:00 PM – 4:00 AM, 7 days a week | verified 5.0★ Google rating.
+  Verified facts: Radisson Blu Hotel, Dubai Waterfront, Mezzanine Floor,
+  Business Bay | daily 11:00 PM – 4:00 AM, 7 days a week | 5.0★ on Google Maps.
 -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
@@ -14,37 +22,42 @@
     <priority>1.0</priority>
     <image:image>
       <image:loc>https://ahmedxoclub.com/images/hero.png</image:loc>
-      <image:title>XO Club Dubai — Khaliji &amp; Arabic Nightclub, VIP tables. Book +971503737162</image:title>
+      <image:title>XO Club Dubai — Khaliji &amp; Arabic nightclub, VIP tables. Book +971503737162</image:title>
     </image:image>
     <image:image>
       <image:loc>https://ahmedxoclub.com/images/vip-table.png</image:loc>
-      <image:title>XO Club Dubai VIP bottle service with sparklers — reservations +971503737162</image:title>
+      <image:title>XO Club Dubai VIP bottle service — reservations +971503737162</image:title>
     </image:image>
   </url>
   <url><loc>https://ahmedxoclub.com/blog</loc><lastmod>2026-10-24</lastmod><changefreq>daily</changefreq><priority>0.9</priority></url>
-  <url><loc>https://ahmedxoclub.com/khaliji-nightlife-dubai</loc><lastmod>2026-10-24</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://ahmedxoclub.com/vip-table-booking-dubai</loc><lastmod>2026-10-24</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://ahmedxoclub.com/best-arabic-nightclub-dubai</loc><lastmod>2026-10-24</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://ahmedxoclub.com/private-events-dubai</loc><lastmod>2026-10-24</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+
+  <!-- Silo hubs (first-party guides) -->
   <url><loc>https://ahmedxoclub.com/dubai-nightlife-guide</loc><lastmod>2026-10-24</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://ahmedxoclub.com/bottle-service-dubai</loc><lastmod>2026-10-24</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
   <url><loc>https://ahmedxoclub.com/business-bay-nightlife</loc><lastmod>2026-10-24</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://ahmedxoclub.com/blog/xo-club-vs-fobia-night-club</loc><lastmod>2026-10-24</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://ahmedxoclub.com/blog/xo-club-vs-avenue-club</loc><lastmod>2026-10-24</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://ahmedxoclub.com/blog/xo-club-vs-omni-club</loc><lastmod>2026-10-24</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://ahmedxoclub.com/blog/xo-club-vs-dxb-night-club</loc><lastmod>2026-10-24</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ahmedxoclub.com/vip-table-booking-dubai</loc><lastmod>2026-10-24</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://ahmedxoclub.com/private-events-dubai</loc><lastmod>2026-10-24</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://ahmedxoclub.com/dubai-nightclub-entertainment</loc><lastmod>2026-10-24</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://ahmedxoclub.com/nightclub-reservations-dubai</loc><lastmod>2026-10-24</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://ahmedxoclub.com/xo-club-experience</loc><lastmod>2026-10-24</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://ahmedxoclub.com/khaliji-nightlife-dubai</loc><lastmod>2026-10-24</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ahmedxoclub.com/best-arabic-nightclub-dubai</loc><lastmod>2026-10-24</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ahmedxoclub.com/bottle-service-dubai</loc><lastmod>2026-10-24</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+
+  <!-- Blog (planning pillar) -->
+  <url><loc>https://ahmedxoclub.com/blog/dubai-night-out-first-timers-guide</loc><lastmod>2026-10-24</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ahmedxoclub.com/blog/dubai-nightclub-etiquette-guide</loc><lastmod>2026-10-24</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+  <!-- Blog (transparency & trust pillar) -->
   <url><loc>https://ahmedxoclub.com/blog/how-much-does-a-night-at-xo-club-cost</loc><lastmod>2026-10-24</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://ahmedxoclub.com/blog/is-xo-club-safe-anti-scam-policy</loc><lastmod>2026-10-24</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+  <!-- Blog (Khaliji experience pillar) -->
   <url><loc>https://ahmedxoclub.com/blog/what-is-authentic-khaliji-nightlife</loc><lastmod>2026-10-24</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://ahmedxoclub.com/blog/best-arabic-nightclubs-business-bay</loc><lastmod>2026-10-24</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+  <!-- Blog (practical FAQ pillar) -->
   <url><loc>https://ahmedxoclub.com/blog/dress-code-at-xo-club-dubai</loc><lastmod>2026-10-24</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://ahmedxoclub.com/blog/do-i-need-a-reservation-for-vip-tables</loc><lastmod>2026-10-24</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://ahmedxoclub.com/blog/is-there-a-ladies-night-at-xo-club</loc><lastmod>2026-10-24</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://ahmedxoclub.com/blog/how-to-book-a-vip-table-at-xo-club</loc><lastmod>2026-10-24</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://ahmedxoclub.com/vs-fobia-club</loc><lastmod>2026-10-24</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://ahmedxoclub.com/vs-omni-club</loc><lastmod>2026-10-24</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://ahmedxoclub.com/vs-avenue-club</loc><lastmod>2026-10-24</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://ahmedxoclub.com/vs-solitaire-club</loc><lastmod>2026-10-24</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://ahmedxoclub.com/vs-dxb-night-club</loc><lastmod>2026-10-24</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://ahmedxoclub.com/vs-club-one</loc><lastmod>2026-10-24</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
 </urlset>

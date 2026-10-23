@@ -15,56 +15,21 @@ export interface ReviewCard {
   source: string;
 }
 
-/** Curated static feed — used until real approved reviews exist in the DB. */
-const CURATED: ReviewCard[] = [
-  {
-    id: "c1",
-    name: "Ahmed R.",
-    rating: 5,
-    text: "Best club experience in Dubai, hands down. The VIP table service was flawless and the Khaliji set at 2 AM brought the whole floor together. Booking on WhatsApp took two minutes.",
-    source: "Google",
-  },
-  {
-    id: "c2",
-    name: "Sarah M.",
-    rating: 5,
-    text: "The venue inside Radisson Blu Waterfront is stunning — gold everywhere, incredible sound, and a crowd that's there for a good time. Our host made the whole night effortless.",
-    source: "Google",
-  },
-  {
-    id: "c3",
-    name: "Khalid A.",
-    rating: 5,
-    text: "Finally a club where the music mix actually works — hip-hop, R&B and then the Khaleeji classics at the perfect moment. The sparkler parade for the birthday was unreal.",
-    source: "Google",
-  },
-  {
-    id: "c4",
-    name: "Elena V.",
-    rating: 5,
-    text: "Written quote before we arrived, exactly what we paid at the door. No surprises, no games — just a beautiful night. This is how Dubai nightlife should be done.",
-    source: "Google",
-  },
-  {
-    id: "c5",
-    name: "Mohammed F.",
-    rating: 5,
-    text: "Premium booth, bottle service, top-tier DJs and staff who treat you like a guest, not a tab number. Open till 4 AM every night is a game changer.",
-    source: "Google",
-  },
-  {
-    id: "c6",
-    name: "Layla H.",
-    rating: 5,
-    text: "Felt safe and looked after from door to table. The Royal Loft for our celebration was pure luxury. 5.0 stars is honestly deserved.",
-    source: "Google",
-  },
-];
+/**
+ * NOTE (legal/SEO cleanup): the previous CURATED array of sample testimonials
+ * was REMOVED. Publishing invented guest reviews attributed to Google is a
+ * consumer-protection risk and conflicts with the "no invented reviews" rule.
+ *
+ * This section now renders only reviews supplied through the approved database
+ * feed (real, consented guest reviews entered by management). When there are
+ * none, it points readers to the live Google Maps listing instead of filling
+ * the space with placeholder quotes.
+ */
 
 export function Reviews({ reviews }: { reviews: ReviewCard[] }) {
   const { isAr } = useLanguage();
   const t = dictionaries[isAr ? "ar" : "en"];
-  const feed = reviews.length > 0 ? reviews : CURATED;
+  const feed = reviews;
 
   return (
     <section id="reviews" className="relative bg-night-soft/60 py-20 lg:py-28" aria-label={t.reviews.kicker}>
@@ -107,7 +72,30 @@ export function Reviews({ reviews }: { reviews: ReviewCard[] }) {
           </div>
         </Reveal>
 
-        {/* Review feed */}
+        {/* Review feed — approved database reviews, or a link to the live source */}
+        {feed.length === 0 ? (
+          <Reveal delay={0.12}>
+            <div className="mt-10 rounded-3xl border border-gold/20 bg-night-card p-8 text-center">
+              <p className="font-display text-lg font-bold text-cream">
+                {isAr ? "التقييمات على جوجل" : "Read our reviews on Google"}
+              </p>
+              <p className="mx-auto mt-3 max-w-xl text-sm leading-relaxed text-cream/65">
+                {isAr
+                  ? "لا نعرض أي تقييمات مُختلقة. تقييم 5.0★ موثق على خرائط جوجل، ويمكنك قراءة التقييمات الحقيقية مباشرة من مصدرها."
+                  : `We don't publish invented testimonials. Our ${BRAND.rating.value.toFixed(1)}★ rating is verified on Google Maps — read the reviews at their source, in full.`}
+              </p>
+              <a
+                href={BRAND.mapsDirections}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-5 inline-flex h-11 items-center gap-2 rounded-full border border-gold/40 bg-gold/10 px-6 text-sm font-semibold text-gold-light transition hover:border-gold hover:bg-gold/20"
+              >
+                <GoogleG className="h-4 w-4" />
+                {t.reviews.readAll}
+              </a>
+            </div>
+          </Reveal>
+        ) : (
         <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {feed.slice(0, 6).map((r, i) => (
             <Reveal key={r.id} delay={0.05 + (i % 3) * 0.06}>
@@ -133,6 +121,7 @@ export function Reviews({ reviews }: { reviews: ReviewCard[] }) {
             </Reveal>
           ))}
         </div>
+        )}
 
         <Reveal delay={0.2}>
           <p className="mt-6 text-center text-[11px] uppercase tracking-[0.24em] text-cream/40">

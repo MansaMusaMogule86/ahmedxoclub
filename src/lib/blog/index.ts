@@ -3,7 +3,7 @@
  * Import anywhere as `@/lib/blog`.
  */
 import type { BlogPost, PillarKey } from "@/lib/blog/types";
-import { COMPARISON_POSTS } from "@/lib/blog/posts-comparison";
+import { PLANNING_POSTS } from "@/lib/blog/posts-planning";
 import { TRUST_POSTS } from "@/lib/blog/posts-trust";
 import { KHALIJI_POSTS } from "@/lib/blog/posts-khaliji";
 import { PRACTICAL_POSTS } from "@/lib/blog/posts-practical";
@@ -12,7 +12,7 @@ export type { BlogPost, PostSection, Block, FaqPair, Pillar, PillarKey } from "@
 export { PILLARS, getPillar } from "@/lib/blog/pillars";
 
 export const POSTS: BlogPost[] = [
-  ...COMPARISON_POSTS,
+  ...PLANNING_POSTS,
   ...TRUST_POSTS,
   ...KHALIJI_POSTS,
   ...PRACTICAL_POSTS,
@@ -20,7 +20,7 @@ export const POSTS: BlogPost[] = [
 
 /** Editorial order for the /blog index hero strip. */
 export const FEATURED_SLUGS = [
-  "xo-club-vs-fobia-night-club",
+  "dubai-night-out-first-timers-guide",
   "how-much-does-a-night-at-xo-club-cost",
   "best-arabic-nightclubs-business-bay",
   "how-to-book-a-vip-table-at-xo-club",

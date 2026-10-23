@@ -243,7 +243,7 @@ export const TRUST_POSTS: BlogPost[] = [
     related: [
       "how-much-does-a-night-at-xo-club-cost",
       "do-i-need-a-reservation-for-vip-tables",
-      "xo-club-vs-fobia-night-club",
+      "dubai-nightclub-etiquette-guide",
     ],
     ctaMessage:
       "Hi XO Club Dubai! I'd like to verify and book safely through the official line — please send a written quote.",

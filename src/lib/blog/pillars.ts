@@ -3,11 +3,12 @@ import type { Pillar } from "@/lib/blog/types";
 /** The 4 content pillars. Each one maps to a search-intent cluster. */
 export const PILLARS: Pillar[] = [
   {
-    key: "comparisons",
-    id: "comparisons",
-    name: "Competitor Comparisons",
-    nameAr: "مقارنات مع النوادي الأخرى",
-    intent: "Capture decision-stage queries from guests comparing Dubai venues.",
+    key: "planning",
+    id: "planning",
+    name: "Dubai Nightlife Planning",
+    nameAr: "التخطيط لليلة في دبي",
+    intent:
+      "Help first-time and returning guests plan a night out: timing, what to wear, transport, budget and reservations.",
   },
   {
     key: "trust",

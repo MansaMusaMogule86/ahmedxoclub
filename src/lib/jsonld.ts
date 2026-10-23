@@ -6,7 +6,6 @@
 import { BRAND } from "@/lib/brand";
 import { FAQS } from "@/lib/faq";
 import type { BlogPost } from "@/lib/blog/types";
-import type { Competitor } from "@/lib/competitors";
 
 const URL = BRAND.domain;
 
@@ -297,23 +296,6 @@ export function blogCollectionSchema(posts: BlogPost[]) {
         url: `${URL}/blog/${p.slug}`,
       })),
     },
-  };
-}
-
-/**
- * FAQPage for a /vs-* interception page.
- * Rival claims stay neutral — see lib/competitors.ts tone contract.
- */
-export function competitorFaqSchema(c: Competitor) {
-  return {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "@id": `${URL}/vs-${c.slug}#faq`,
-    mainEntity: c.faqs.map((f) => ({
-      "@type": "Question",
-      name: f.q,
-      acceptedAnswer: { "@type": "Answer", text: f.a },
-    })),
   };
 }
 

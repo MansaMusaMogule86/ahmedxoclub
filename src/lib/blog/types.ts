@@ -29,7 +29,11 @@ export interface FaqPair {
   a: string;
 }
 
-export type PillarKey = "comparisons" | "trust" | "khaliji" | "practical";
+/**
+ * Pillar keys. NOTE: the former "comparisons" pillar (named-competitor posts)
+ * was retired for legal review — see archive/competitor-comparison/README.md.
+ */
+export type PillarKey = "planning" | "trust" | "khaliji" | "practical";
 
 export interface BlogPost {
   slug: string;

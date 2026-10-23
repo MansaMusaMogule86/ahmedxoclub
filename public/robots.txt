@@ -41,4 +41,11 @@ Allow: /
 User-agent: Meta-ExternalAgent
 Allow: /
 
+# NOTE ON RETIRED URLS (legal review, Oct 2026):
+# The former named-competitor comparison pages (/vs-* and /blog/xo-club-vs-*)
+# were permanently retired and now return HTTP 410 Gone. They are intentionally
+# NOT listed as Disallow here: blocking them would stop crawlers fetching the
+# URL, so they would never see the 410 and the pages could linger in the index.
+# Returning 410 is the correct de-indexing signal.
+
 Sitemap: https://ahmedxoclub.com/sitemap.xml

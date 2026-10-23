@@ -95,7 +95,7 @@ export const PRACTICAL_POSTS: BlogPost[] = [
     related: [
       "do-i-need-a-reservation-for-vip-tables",
       "how-much-does-a-night-at-xo-club-cost",
-      "xo-club-vs-dxb-night-club",
+      "dubai-night-out-first-timers-guide",
     ],
     ctaMessage:
       "Hi XO Club Dubai! Quick dress-code question before we book — here is our date and group size.",

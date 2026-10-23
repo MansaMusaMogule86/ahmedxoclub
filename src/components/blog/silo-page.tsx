@@ -131,7 +131,7 @@ export function SiloPage({ silo }: { silo: Silo }) {
           <RelatedLinks
             links={[
               { name: "Browse every guide on the XO blog", href: "/blog" },
-              { name: "Compare XO with other Dubai clubs", href: "/vs-fobia-club" },
+              { name: "Nightclub reservations in Dubai", href: "/nightclub-reservations-dubai" },
               { name: "Book a VIP table on the booking page", href: "/#booking" },
             ]}
           />

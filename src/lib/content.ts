@@ -84,17 +84,17 @@ export const en = {
     kicker: "Why XO Club",
     title: "Dubai's 5.0-star night out",
     subtitle:
-      "A perfect Google rating doesn't happen by accident. XO was engineered to be the night every other Dubai club gets compared to.",
+      "A perfect Google rating isn't an accident — it is built night after night, guest by guest. Here is what those nights are made of.",
     items: [
       {
         icon: "star",
         title: "Verified 5.0★ rating",
-        desc: "XO Club Dubai holds a perfect 5.0-star rating on Google Maps — the highest standard in the scene, earned one night at a time.",
+        desc: "XO Club Dubai holds a verified 5.0-star rating on Google Maps — earned one night at a time, across every guest experience.",
       },
       {
         icon: "building",
         title: "A five-star address",
-        desc: "Mezzanine Floor, Radisson Blu Hotel, Dubai Waterfront — Business Bay's most elegant nightlife address, minutes from Downtown.",
+        desc: "Mezzanine Floor, Radisson Blu Hotel, Dubai Waterfront — a five-star hotel address on the Business Bay canal, minutes from Downtown.",
       },
       {
         icon: "crown",
@@ -172,23 +172,11 @@ export const en = {
     reserveBoxBody:
       "One WhatsApp message to +971 50 373 7162: date, guests, table. Written quote within minutes.",
   },
-  compare: {
-    kicker: "XO vs. The Rest",
-    title: "Why Dubai picks XO over every alternative",
-    subtitle:
-      "Compare the facts — not the flyers. XO Club Dubai against the typical Dubai club experience.",
-    colXo: "XO Club Dubai",
-    colOther: "Typical Dubai clubs",
-    rows: [
-      { label: "Google rating", xo: "5.0★ — verified, perfect", other: "Usually 3.5–4.5★, unverified hype" },
-      { label: "Address", xo: "Radisson Blu Hotel, Dubai Waterfront — a 5-star address", other: "Basements, warehouses, hard-to-find doors" },
-      { label: "Booking", xo: "One line: +971 50 373 7162 — WhatsApp & call", other: "Middlemen, promoters, numbers that change" },
-      { label: "Pricing", xo: "Written quote before you arrive", other: "Mystery minimums invented at the door" },
-      { label: "Music", xo: "Hip-Hop · R&B · Commercial · Khaliji — one floor", other: "One genre, one crowd, one energy" },
-      { label: "Hours", xo: "Daily 11 PM – 4 AM, 7 days", other: "Closed days, early closings, seasonal gaps" },
-    ],
-    cta: "Experience the difference — book +971 50 373 7162",
-  },
+  /* The former `compare` block ("XO vs. The Rest") was removed: it made
+     unverified negative claims about other venues ("basements", "mystery
+     minimums", "unverified hype"). The section is now first-party facts only —
+     see components/club/compare.tsx and the archive note in
+     archive/competitor-comparison/README.md. */
   gallery: {
     kicker: "Inside XO",
     title: "The room speaks for itself",
@@ -392,17 +380,17 @@ export const ar: Dictionary = {
     kicker: "لماذا إكس أو",
     title: "ليلة دبي بتقييم 5.0 نجوم",
     subtitle:
-      "تقييم جوجل المثالي لا يأتي بالمصادفة. بُني إكس أو ليكون الليلة التي تُقارن معها كل نوادي دبي الأخرى.",
+      "تقييم جوجل الكامل لا يأتي بالمصادفة — يُبنى ليلة بعد ليلة وضيفاً بعد ضيف. هذه هي مكوّنات تلك الليالي.",
     items: [
       {
         icon: "star",
         title: "تقييم 5.0★ موثق",
-        desc: "يحمل إكس أو كلوب دبي تقييماً كاملاً 5.0 نجوم على خرائط جوجل — أعلى معيار في المشهد، يُكتسب ليلة بعد ليلة.",
+        desc: "يحمل إكس أو كلوب دبي تقييماً موثقاً 5.0 نجوم على خرائط جوجل — يُكتسب ليلة بعد ليلة في تجربة كل ضيف.",
       },
       {
         icon: "building",
         title: "عنوان خمس نجوم",
-        desc: "الطابق الأوسط، فندق راديسون بلو دبي ووترفرنت — أنرق عنوان سهر في الخليج التجاري، دقائق من داون تاون.",
+        desc: "الطابق الأوسط، فندق راديسون بلو دبي ووترفرنت — عنوان فندق خمس نجوم على قناة الخليج التجاري، دقائق من داون تاون.",
       },
       {
         icon: "crown",
@@ -478,22 +466,9 @@ export const ar: Dictionary = {
     reserveBox: "احجز ليلتك",
     reserveBoxBody: "رسالة واتساب واحدة إلى +971 50 373 7162: التاريخ والضيوف والطاولة. عرض مكتوب خلال دقائق.",
   },
-  compare: {
-    kicker: "إكس أو مقابل الآخرين",
-    title: "لماذا يختار دبي إكس أو عن كل البدائل",
-    subtitle: "قارن الحقائق — لا الإعلانات. إكس أو كلوب دبي مقابل تجربة النادي الدبي النموذجية.",
-    colXo: "إكس أو كلوب دبي",
-    colOther: "النوادي الدبي النموذجية",
-    rows: [
-      { label: "تقييم جوجل", xo: "5.0★ — موثق وكامل", other: "عادةً 3.5–4.5★ بلا توثيق" },
-      { label: "العنوان", xo: "فندق راديسون بلو دبي ووترفرنت — عنوان خمس نجوم", other: "أقبية ومستودعات وأبواب يصعب إيجادها" },
-      { label: "الحجز", xo: "خط واحد: +971 50 373 7162 — واتساب ومكالمة", other: "وسطاء ومروج وأرقام تتغير" },
-      { label: "الأسعار", xo: "عرض مكتوب قبل وصولك", other: "حدود غامضة تُخترع عند الباب" },
-      { label: "الموسيقى", xo: "هيب هوب · آر أند بي · كوميرشال · خليجي — أرضية واحدة", other: "نمط واحد وجمهور واحد وطاقة واحدة" },
-      { label: "الساعات", xo: "يومياً 11 مساءً – 4 صباحاً، 7 أيام", other: "أيام مغلقة وإغلاقات مبكرة" },
-    ],
-    cta: "عِش الفرق — احجز +971 50 373 7162",
-  },
+  /* أُزيل مقطع المقارنة السابق («إكس أو مقابل الآخرين») لاحتوائه ادعاءات سلبية
+     غير موثقة عن أماكن أخرى. القسم الآن حقائق عن إكس أو فقط — انظر
+     components/club/compare.tsx وملاحظة الأرشيف في archive/. */
   gallery: {
     kicker: "من داخل إكس أو",
     title: "المكان يتحدث عن نفسه",

@@ -118,45 +118,46 @@ export const SILOS: Silo[] = [
   },
   {
     slug: "best-arabic-nightclub-dubai",
-    tab: "Best Arabic Nightclub",
-    tabAr: "أفضل نادي عربي",
+    tab: "Arabic & Khaliji Nights",
+    tabAr: "الليالي العربية والخليجية",
     image: "/images/interior.png",
     en: {
-      title: "Best Arabic Nightclub in Dubai: Why XO Leads (2025)",
-      subtitle: "The five checks that decide it — and how XO scores a perfect 5.0★ on every one.",
+      title: "Arabic & Khaliji Nights in Dubai: The XO Club Guide",
+      subtitle:
+        "What a Gulf night out at XO Club Dubai actually looks like — the music, the tables and the timing.",
       intro:
-        "Every club calls itself the best. So don't trust the claim — run the five checks any serious guest can apply in five minutes: rating, address, transparency, format and hours. XO Club Dubai passes all five.",
+        "XO Club Dubai gives Arabic/Khaliji music a permanent place on the main floor, fused every night with Hip-Hop, R&B and Commercial. If you are planning an Arabic night out in Dubai, this is what you can expect from us: Mezzanine Floor, Radisson Blu Hotel, Dubai Waterfront, Business Bay — open daily from 11:00 PM to 4:00 AM.",
       body: [
-        "Check one — the rating: XO Club Dubai holds a verified 5.0★ on Google Maps, a perfect score defended one guest at a time. Check two — the address: Mezzanine Floor, Radisson Blu Hotel, Dubai Waterfront, Business Bay; a five-star hotel venue, not a hidden basement. Check three — transparency: every minimum spend confirmed in writing on WhatsApp before you arrive.",
-        "Check four — the format: XO gives Arabic/Khaliji music its rightful place on the main floor, fused nightly with Hip-Hop, R&B and Commercial hits — the mixed-crowd format that matches how Dubai actually parties, expats and Gulf guests on the same dance floor. Check five — the hours: open 7 days a week, daily 11 PM to 4 AM, with no early closings and no dark days.",
-        "Use the checklist on any competitor — including the big-name hotel clubs Downtown. Ask one question that reveals everything: 'What's your written minimum spend for Friday?' A confident venue answers in minutes on WhatsApp. XO answers instantly: +971503737162. That confidence — plus a 5.0★ rating and a Radisson Blu address — is why XO leads the Arabic nightclub conversation in Dubai.",
+        "The music: Arabic/Khaliji runs as a core format every night, not a single late set. Khaleeji anthems and Gulf remixes sit in rotation alongside Hip-Hop, R&B and Commercial on one floor, with the peak between roughly 12:30 and 2:00 AM and the final Khaliji run carrying the room to 4:00 AM.",
+        "The tables: VIP guests reserve in advance — the XO Signature Table (up to 5 guests), the Premium Booth (up to 8) or the XO Royal Loft (10–15) — with a minimum spend credited against what you order. Every figure is confirmed in writing on WhatsApp before you arrive, so nothing changes at the door.",
+        "The arrival: XO is on the Mezzanine Floor of the Radisson Blu Hotel, Dubai Waterfront in Business Bay, with hotel valet and parking at the entrance, a staffed hotel door, a 21+ ID check and a smart-elegant dress code. Doors open at 11:00 PM — arriving before midnight puts you there for the full night.",
       ],
       stats: [
-        { value: "5.0★", label: "perfect Google Maps rating" },
-        { value: "5/5", label: "checks passed — rating to hours" },
+        { value: "5.0★", label: "verified Google Maps rating" },
+        { value: "Nightly", label: "Arabic/Khaliji core format" },
         { value: "Radisson Blu", label: "five-star hotel address" },
         { value: "Daily", label: "open 7 days · 11 PM – 4 AM" },
       ],
       faqs: [
         {
-          q: "What is the best Arabic nightclub in Dubai?",
-          a: "XO Club Dubai — verified 5.0★ Google rating, Radisson Blu Hotel Dubai Waterfront address, Arabic/Khaliji music nightly, and written quotes on +971503737162.",
+          q: "Where can I find an Arabic night out in Dubai?",
+          a: "XO Club Dubai runs Arabic/Khaliji as a core format every night on the Mezzanine Floor of the Radisson Blu Hotel, Dubai Waterfront in Business Bay, alongside Hip-Hop, R&B and Commercial, from 11 PM to 4 AM. Reservations: +971503737162.",
         },
         {
-          q: "Do Dubai clubs really play Arabic music every night?",
-          a: "Most don't. XO Club Dubai gives Arabic/Khaliji music a nightly slot on the main floor alongside Hip-Hop, R&B and Commercial — one mixed floor, every night.",
+          q: "Which nights carry Arabic music at XO Club Dubai?",
+          a: "Every night. Arabic/Khaliji is programmed as part of the standing format rather than a single weekly slot, and guest sets or themed evenings are announced on WhatsApp +971503737162 before the date.",
         },
         {
-          q: "Which Arabic nightclub in Dubai has the best location?",
-          a: "XO Club Dubai: Mezzanine Floor, Radisson Blu Hotel, Dubai Waterfront, Business Bay — minutes from Downtown, inside a flagship five-star hotel.",
+          q: "How do I get to XO Club Dubai for an Arabic night?",
+          a: "Set your maps to Radisson Blu Hotel, Dubai Waterfront, Business Bay — XO is on the Mezzanine Floor, with hotel valet and parking at the entrance. Directions and reservations: +971503737162.",
         },
       ],
     },
     ar: {
-      title: "أفضل نادي عربي في دبي: لماذا يتقدم إكس أو (2025)",
-      subtitle: "الفحوصات الخمسة الحاسمة — وكيف تنال إكس أو 5.0★ كاملة في كل منها.",
+      title: "الليالي العربية والخليجية في دبي: دليل إكس أو كلوب",
+      subtitle: "كيف تبدو ليلة خليجية في إكس أو كلوب دبي — الموسيقى والطاولات والتوقيت.",
       intro:
-        "كل نادٍ يدّعي أنه الأفضل. لا تصدق الادعاء — طبّق الفحوصات الخمسة: التقييم، العنوان، الشفافية، التشكيلة، والساعات. إكس أو كلوب دبي يجتازها كلها.",
+        "يمنح إكس أو كلوب دبي الموسيقى العربية والخليجية مكاناً دائماً على الأرضية الرئيسية، ممزوجة كل ليلة بالهيب هوب والآر أند بي والكوميرشال. إن كنت تخطط لليلة عربية في دبي، هذا ما يمكنك توقعه منا: الطابق الأوسط، فندق راديسون بلو دبي ووترفرنت، الخليج التجاري — مفتوح يومياً من 11 مساءً حتى 4 صباحاً.",
     },
   },
   {
@@ -329,6 +330,145 @@ export const SILOS: Silo[] = [
       subtitle: "حي القناة بعد الغروب — أين تذهب، وكم تكلف، وكيف تعيشها صحيحة.",
       intro:
         "نما الخليج التجاري ليصبح أنرق أحياء السهر في دبي بهدوء: فنادق خمس نجوم على القناة، ومداخل صف سيارات على مسافة قدم، وقاعات صُممت للجمهور المختلط — مقيمين وزوار ومحليين في ليلة واحدة.",
+    },
+  },
+  {
+    slug: "dubai-nightclub-entertainment",
+    tab: "Nightclub Entertainment",
+    tabAr: "فنون السهر",
+    image: "/images/dj.png",
+    en: {
+      title: "Dubai Nightclub Entertainment: What to Expect From 11 PM to 4 AM",
+      subtitle:
+        "How the entertainment side of a Dubai club night actually works — the formats, the arc of the evening and how line-ups are announced.",
+      intro:
+        "Entertainment in a Dubai club is more than one DJ on a podium: it is the arc of the room across five hours. At XO Club Dubai — Mezzanine Floor, Radisson Blu Hotel, Dubai Waterfront, Business Bay — the programme runs nightly from 11:00 PM to 4:00 AM across Hip-Hop, R&B, Commercial and Arabic/Khaliji, with celebrated guest appearances announced in advance rather than promised on a flyer.",
+      body: [
+        "The formats: four are programmed as standing parts of the night — Hip-Hop, R&B, Commercial and Arabic/Khaliji. Because they are scheduled rather than rotated weekly, you do not have to guess which night suits you: the room moves through the same arc whatever evening you visit.",
+        "The arc of the evening: doors open at 11:00 PM and early tables fill first. The floor tightens by midnight, energy peaks roughly between 12:30 and 2:00 AM, and the final Khaliji stretch carries the room to the 4:00 AM close. Entertainers, dance moments and celebration spotlights are timed around that peak rather than scattered across the night.",
+        "Guest appearances: rather than publishing a fixed weekly schedule that changes, XO announces guest DJs, live sets and themed evenings on WhatsApp first — so what you are told is what is happening. Ask what is on before you book on +971503737162, and you will get the real programme for that date.",
+        "What you will not find: invented headliner names or line-ups that never play. XO publishes a name only when it is confirmed. If a night is still being finalised, the team will tell you that too — and hold your table either way.",
+      ],
+      stats: [
+        { value: "5 hours", label: "of programme, 11 PM – 4 AM, nightly" },
+        { value: "4 formats", label: "Hip-Hop · R&B · Commercial · Khaliji" },
+        { value: "WhatsApp first", label: "line-ups announced before the date" },
+        { value: "Daily", label: "open 7 days a week" },
+      ],
+      faqs: [
+        {
+          q: "What kind of entertainment does a Dubai nightclub programme?",
+          a: "Typically a resident DJ format with guest appearances, dance moments and celebration spotlights. At XO Club Dubai the programme runs 11 PM–4 AM nightly across Hip-Hop, R&B, Commercial and Arabic/Khaliji, with guest DJs, live sets and themed evenings announced on WhatsApp +971503737162 before the date.",
+        },
+        {
+          q: "How do I find out who is playing at XO Club Dubai?",
+          a: "Message the official line, +971503737162. XO does not publish a fixed weekly schedule; confirmed guest DJs, live sets and themed nights are announced on WhatsApp first, and the team will tell you exactly what is programmed for your date.",
+        },
+        {
+          q: "What time is the entertainment peak at XO Club Dubai?",
+          a: "The floor reaches its peak between roughly 12:30 and 2:00 AM, and the final Khaliji run carries the room to the 4:00 AM close. Arriving before midnight means you experience the full arc of the programme.",
+        },
+      ],
+    },
+    ar: {
+      title: "فنون السهر في نوادي دبي: ما تتوقعه من 11 مساءً حتى 4 صباحاً",
+      subtitle: "كيف يعمل الجانب الفني في ليلة نادٍ بدبي — التشكيلات، ومسار الليلة، وكيف تُعلن الأسماء.",
+      intro:
+        "الفنون في نادي دبي أكثر من منسق أغانٍ واحد: إنها مسار القاعة على مدى خمس ساعات. في إكس أو كلوب دبي — الطابق الأوسط، فندق راديسون بلو دبي ووترفرنت، الخليج التجاري — يمتد البرنامج يومياً من 11 مساءً حتى 4 صباحاً عبر الهيب هوب والآر أند بي والكوميرشال والعربي/الخليجي، مع إعلان الضيوف مسبقاً بدلاً من الوعود على المنشورات.",
+    },
+  },
+  {
+    slug: "nightclub-reservations-dubai",
+    tab: "Nightclub Reservations",
+    tabAr: "حجوزات النوادي",
+    image: "/images/vip-table.png",
+    en: {
+      title: "Nightclub Reservations in Dubai: How the Process Actually Works",
+      subtitle:
+        "Booking windows, written quotes, changes, arrival and ID — the logistics of reserving a table, without the guesswork.",
+      intro:
+        "A Dubai nightclub reservation is a short, documented process: you send a date, a guest count and a preference; you receive a written quote and a confirmed table position; you arrive and walk to your table. At XO Club Dubai that whole conversation happens on one line — +971503737162 — and this page sets out how each part of it works, including what to do when plans change.",
+      body: [
+        "Before you book: message the official line with four things — the date, the number of guests, the experience you prefer (XO Signature Table up to 5 guests, Premium Booth up to 8, or XO Royal Loft for 10–15) and any celebration you want set up. The clearer the first message, the faster the quote comes back. Weekdays are usually straightforward; Thursday to Saturday and groups of eight or more benefit from booking a day or two ahead.",
+        "What you receive: a written minimum spend for your date and a confirmed table position — in writing, on WhatsApp, before you commit. Nothing is agreed verbally, there is no deposit paid to a third party, and the figure you are sent is the figure you pay. Keep the thread: it is your reference at the door.",
+        "When plans change: message the same line as early as you can. Guest numbers, arrival times and table preferences can usually be adjusted while the room allows, and the reservation is still yours. Late arrivals are handled at the door — your table is held even if you join after midnight, though capacity rules still apply to the room as a whole.",
+        "On arrival: XO is on the Mezzanine Floor of the Radisson Blu Hotel, Dubai Waterfront in Business Bay, with hotel valet and parking at the entrance. Entry is 21+ with valid ID (Emirates ID or passport) and a smart-elegant dress code. Give the door your name or show your booking thread and you are taken through to your table.",
+      ],
+      stats: [
+        { value: "1 line", label: "for quote, changes and arrival: +971 50 373 7162" },
+        { value: "Written", label: "minimum spend before you commit" },
+        { value: "24h", label: "recommended lead time on Thu–Sat" },
+        { value: "Daily", label: "reservations answered until 4 AM" },
+      ],
+      faqs: [
+        {
+          q: "How does reserving a nightclub table in Dubai work?",
+          a: "You message the venue with your date, guest count and preferred experience; you receive a written minimum spend and a confirmed table position; then you arrive and walk to your table. At XO Club Dubai the whole process runs on one line: +971503737162.",
+        },
+        {
+          q: "Can I change or cancel a nightclub reservation in Dubai?",
+          a: "Message the venue as early as you can on the same booking line. Guest numbers, arrival times and table preferences can usually be adjusted while availability allows, and your reservation stays valid. XO Club Dubai: +971503737162.",
+        },
+        {
+          q: "What should I send in the first booking message?",
+          a: "Date, number of guests, the experience you want (XO Signature Table, Premium Booth or XO Royal Loft) and any celebration details. That is enough for XO Club Dubai to send a written quote — +971503737162.",
+        },
+        {
+          q: "Do I need a deposit to reserve a table in Dubai?",
+          a: "At XO Club Dubai you receive a written minimum spend on WhatsApp and no deposit is paid to any third party or promoter. The quoted minimum is credited against what you order on the night: +971503737162.",
+        },
+      ],
+    },
+    ar: {
+      title: "حجوزات النوادي في دبي: كيف تعمل العملية فعلاً",
+      subtitle: "أوقات الحجز، والعروض المكتوبة، والتغييرات، والوصول والهوية — لوجستيات حجز الطاولة بلا تخمين.",
+      intro:
+        "حجز نادٍ في دبي عملية قصيرة وموثقة: ترسل التاريخ وعدد الضيوف والتفضيل، فتستلم عرضاً مكتوباً وموقع طاولة مؤكداً، ثم تصل وتتجه إلى طاولتك. في إكس أو كلوب دبي تتم هذه المحادثة على خط واحد — +971503737162.",
+    },
+  },
+  {
+    slug: "xo-club-experience",
+    tab: "The XO Experience",
+    tabAr: "تجربة إكس أو",
+    image: "/images/entrance.png",
+    en: {
+      title: "The XO Club Experience: A Night in Detail",
+      subtitle:
+        "From the hotel door at 11 PM to the last Khaliji record at 4 AM — a walkthrough of how a night at XO unfolds.",
+      intro:
+        "Every venue has a shape to its night, and guests plan around it. Here is the shape of XO Club Dubai: Mezzanine Floor, Radisson Blu Hotel, Dubai Waterfront, Business Bay — doors at 11:00 PM, peak between 12:30 and 2:00 AM, close at 4:00 AM, seven nights a week.",
+      body: [
+        "Arrival, 11:00 PM: you come in through the Radisson Blu lobby rather than a back street — valet or hotel parking, a staffed door, a 21+ ID check and a smart-elegant dress code. Inside, the room is still breathable: early tables are settling, the first set is building, and it is the easiest hour to actually talk to your group.",
+        "Midnight to the peak, 12:30 – 2:00 AM: the floor tightens and the mixed crowd fills in — Gulf guests, expats and visitors on one floor, which is the format XO was built around. Bottle service moves to the tables with the sparkler parade, celebrations get their moment, and the four-format policy keeps the room moving from Hip-Hop and R&B into Commercial and then Arabic/Khaliji without the floor emptying.",
+        "The last stretch, 2:00 – 4:00 AM: the room settles into its Khaliji run and the energy becomes more local and more focused. Table service continues, and the floor thins gradually rather than emptying on a cut-off. When the lights come up at 4:00 AM you are a short ride from your hotel — or a lift ride from your room if you are staying at the Radisson Blu.",
+        "What holds it together: one booking line for everything (+971503737162), a written minimum spend before you arrive, a table that is genuinely held for you, and a team you can actually find at 1 AM. That is the experience — not a themed gimmick, but a night that runs the way it was described to you.",
+      ],
+      stats: [
+        { value: "11 PM – 4 AM", label: "the full arc, every night" },
+        { value: "12:30 – 2 AM", label: "the peak of the floor" },
+        { value: "Radisson Blu", label: "hotel arrival with valet and parking" },
+        { value: "One line", label: "bookings, changes and questions: +971 50 373 7162" },
+      ],
+      faqs: [
+        {
+          q: "What is the XO Club Dubai experience like?",
+          a: "A five-hour night inside the Radisson Blu Hotel, Dubai Waterfront, Mezzanine Floor: doors at 11 PM, a mixed crowd and bottle service through the peak between 12:30 and 2 AM, then the Khaliji run to the 4 AM close. Reservations: +971503737162.",
+        },
+        {
+          q: "How long does a night at XO Club Dubai last?",
+          a: "Five hours — the venue opens daily at 11:00 PM and closes at 4:00 AM, seven days a week. Most guests arrive between 11 PM and midnight to be there for the peak.",
+        },
+        {
+          q: "Is XO Club Dubai worth visiting on a weekday?",
+          a: "The format is the same every night — four music formats, bottle service, mixed crowd — and weekday tables are generally easier to secure, with the same 11:00 PM to 4:00 AM hours. Reserve on WhatsApp +971503737162.",
+        },
+      ],
+    },
+    ar: {
+      title: "تجربة إكس أو كلوب: ليلة بالتفصيل",
+      subtitle: "من باب الفندق في 11 مساءً إلى آخر أغنية خليجية في 4 صباحاً — كيف تمضي ليلة في إكس أو.",
+      intro:
+        "لكل مكان شكل خاص لليلته، والضيوف يخططون على أساسه. هذا هو شكل إكس أو كلوب دبي: الطابق الأوسط، فندق راديسون بلو دبي ووترفرنت، الخليج التجاري — الأبواب في 11 مساءً، الذروة بين 12:30 و2 صباحاً، والإغلاق في 4 صباحاً، سبع ليالٍ في الأسبوع.",
     },
   },
 ];
