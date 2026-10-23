@@ -1,0 +1,61 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+// Nightly table booking captured from the website booking engine.
+model Booking {
+  id        String   @id @default(cuid())
+  reference String   @unique // e.g. XO-7K2Q9X
+  name      String
+  phone     String
+  email     String?
+  date      String // YYYY-MM-DD in Asia/Dubai timezone
+  guests    Int
+  tableType String // SIGNATURE | PREMIUM | ROYAL
+  occasion  String?
+  notes     String?
+  status    String   @default("PENDING") // PENDING | CONFIRMED | CANCELLED
+  source    String   @default("website")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([date, tableType])
+}
+
+// Upcoming events / weekly headline nights shown in the calendar + Event schema.
+model Event {
+  id            String   @id @default(cuid())
+  slug          String   @unique
+  title         String
+  titleAr       String?
+  description   String
+  descriptionAr String?
+  performer     String
+  date          DateTime
+  coverCharge   String?
+  offer         String?
+  category      String   @default("party") // party | ladies | live | dj | cultural
+  featured      Boolean  @default(false)
+  createdAt     DateTime @default(now())
+
+  @@index([date])
+}
+
+// Guest reviews (Google / TripAdvisor syndicated + on-site submissions).
+model Review {
+  id        String   @id @default(cuid())
+  name      String
+  rating    Int // 1..5
+  text      String
+  source    String   @default("Google")
+  approved  Boolean  @default(false)
+  featured  Boolean  @default(false)
+  createdAt DateTime @default(now())
+
+  @@index([approved, featured])
+}

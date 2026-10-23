@@ -1,0 +1,47 @@
+{
+  "name": "XO Club Dubai — Khaliji & Arabic Nightclub",
+  "short_name": "XO Club Dubai",
+  "description": "Dubai's verified 5.0★ Khaliji & Arabic nightclub at Radisson Blu Hotel, Dubai Waterfront, Business Bay. VIP tables & bottle service, daily 11 PM–4 AM. Book: +971503737162",
+  "id": "/",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#08080A",
+  "theme_color": "#08080A",
+  "lang": "en",
+  "dir": "ltr",
+  "categories": ["nightlife", "entertainment", "food"],
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/images/hero.png",
+      "sizes": "1344x768",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Book a VIP Table",
+      "short_name": "Book",
+      "description": "Reserve your VIP table on WhatsApp: +971503737162",
+      "url": "/#booking"
+    },
+    {
+      "name": "Tonight at XO",
+      "short_name": "Tonight",
+      "description": "Tonight's program and reservations",
+      "url": "/#tonight"
+    },
+    {
+      "name": "Location & Hours",
+      "short_name": "Location",
+      "description": "Radisson Blu Hotel, Dubai Waterfront — Mezzanine Floor, Business Bay",
+      "url": "/#location"
+    }
+  ]
+}

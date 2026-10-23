@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 64">
+  <rect width="340" height="64" rx="14" fill="#08080A"/>
+  <rect x="2" y="2" width="336" height="60" rx="12" fill="none" stroke="#D4AF37" stroke-width="1.5" opacity="0.6"/>
+  <text x="44" y="45" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="34" font-weight="bold" fill="#D4AF37" letter-spacing="4">XO</text>
+  <text x="92" y="30" font-family="Georgia, 'Times New Roman', serif" font-size="15" font-weight="bold" fill="#F5F1E8" letter-spacing="5">CLUB</text>
+  <text x="92" y="50" font-family="Georgia, 'Times New Roman', serif" font-size="15" font-weight="bold" fill="#D4AF37" letter-spacing="5">DUBAI</text>
+  <path d="M280 26 L292 26 M286 20 L286 32" stroke="#B3243A" stroke-width="2"/>
+</svg>
