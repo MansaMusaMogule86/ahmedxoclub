@@ -19,23 +19,27 @@ export function Hero() {
       <HeroVideo />
       <GoldParticles className="absolute inset-0 h-full w-full" />
 
-      <div className="relative mx-auto w-full max-w-7xl px-6 pb-32 sm:px-10 lg:px-16">
-        <div className="flex flex-col items-center text-center lg:items-start lg:text-start">
-          <p className="glass inline-flex items-center gap-2 rounded-full px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.18em] text-gold-light sm:text-xs">
-            <span className="relative flex h-2 w-2">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-gold opacity-60" />
-              <span className="relative inline-flex h-2 w-2 rounded-full bg-gold" />
-            </span>
-            {p.hero.eyebrow}
-          </p>
+      {/* Eyebrow — pinned to top */}
+      <div className="absolute top-28 left-0 right-0 z-10 flex justify-center px-6 sm:px-10 lg:px-16">
+        <p className="glass inline-flex items-center gap-2 rounded-full px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.18em] text-gold-light sm:text-xs">
+          <span className="relative flex h-2 w-2">
+            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-gold opacity-60" />
+            <span className="relative inline-flex h-2 w-2 rounded-full bg-gold" />
+          </span>
+          {p.hero.eyebrow}
+        </p>
+      </div>
 
-          <h1 className="mt-7 max-w-[22ch] text-shadow-hero">
-            <span className="block font-display text-[1.35rem] font-semibold italic text-gold-shimmer sm:text-3xl lg:text-[1.75rem] xl:text-3xl">
+      {/* Tagline + CTAs — pinned to bottom */}
+      <div className="relative mx-auto w-full max-w-7xl px-6 pb-28 sm:px-10 lg:px-16">
+        <div className="flex flex-col items-center text-center">
+          <h1 className="text-shadow-hero">
+            <span className="block whitespace-nowrap font-display text-[1.35rem] font-semibold italic text-gold-shimmer sm:text-3xl lg:text-[1.75rem] xl:text-3xl">
               {p.hero.tagline}
             </span>
           </h1>
 
-          <div className="mt-9 flex flex-col items-center gap-3 sm:flex-row sm:flex-wrap sm:justify-center lg:justify-start">
+          <div className="mt-9 flex flex-col items-center gap-3 sm:flex-row sm:flex-wrap sm:justify-center">
             <WhatsAppButton size="lg" message={WA_MESSAGES.vip} label={p.hero.reserve} />
             <a
               href="#entrance"

@@ -122,7 +122,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" dir="ltr" suppressHydrationWarning>
+      {/*
+        suppressHydrationWarning is on <body> as well as <html> because browser
+        extensions inject attributes into <body> BEFORE React hydrates —
+        Grammarly adds data-gr-ext-installed / data-new-gr-c-s-check-loaded,
+        LanguageTool and password managers do the same — and React reports that
+        as "some attributes of the server rendered HTML didn't match ... this
+        won't be patched up". The flag only skips the warning for THIS element's
+        own attributes (React looks one level deep), so genuine mismatches inside
+        our own components still surface normally.
+      */}
       <body
+        suppressHydrationWarning
         className={`${inter.variable} ${playfair.variable} ${cinzel.variable} ${cairo.variable} antialiased bg-background text-foreground min-h-screen flex flex-col`}
       >
         {children}
