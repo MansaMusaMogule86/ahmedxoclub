@@ -64,11 +64,7 @@ export function HeroVideo() {
           poster={HERO_POSTER}
           onPlaying={() => setIsPlaying(true)}
           onError={() => setHasFailed(true)}
-          /* Fit: portrait viewports fill (`cover`); landscape viewports use
-             `contain` so the vertical artwork is never cropped, and from xl up
-             it is nudged right so the hero copy sits on the dark stage beside
-             it instead of covering the animation. */
-          className="absolute inset-0 h-full w-full object-cover object-center landscape:object-contain xl:landscape:object-[72%_50%] transition-opacity duration-1000"
+          className="absolute inset-0 h-full w-full object-cover object-center transition-opacity duration-1000"
           style={{ opacity: isPlaying ? 1 : 0 }}
         >
           <source src={HERO_VIDEO_SRC} type="video/mp4" />
@@ -78,10 +74,6 @@ export function HeroVideo() {
       {/* Scrims: keep the copy legible without washing the footage out. */}
       <div className="absolute inset-0 bg-gradient-to-b from-night/75 via-night/40 to-night" />
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_0%,rgba(8,8,8,0.62)_100%)]" />
-      {/* Landscape only: soft vertical fade so the contained video's side bands
-          blend into the stage instead of reading as hard letterboxing. */}
-      <div className="absolute inset-y-0 start-0 hidden w-1/2 bg-gradient-to-r from-night via-night/70 to-transparent xl:landscape:block" />
-      <div className="absolute inset-y-0 end-0 hidden w-1/5 bg-gradient-to-l from-night to-transparent xl:landscape:block" />
     </div>
   );
 }

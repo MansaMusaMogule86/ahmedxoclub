@@ -27,10 +27,8 @@ export function Hero() {
       <HeroVideo />
       <GoldParticles className="absolute inset-0 h-full w-full" />
 
-      <div className="relative mx-auto w-full max-w-7xl px-4 pb-28 pt-32 sm:px-6 lg:pb-24">
-        {/* Portrait: centred over the footage. Desktop: split to the left so the
-            vertical video keeps its composition and CTAs never cover it. */}
-        <div className="flex flex-col items-center text-center xl:items-start xl:text-start">
+      <div className="relative mx-auto w-full max-w-7xl px-6 pb-28 pt-32 sm:px-10 lg:px-16 lg:pb-24">
+        <div className="flex flex-col items-center text-center lg:items-start lg:text-start">
           {/* Eyebrow: category + city (keeps the money keyword visible above the fold) */}
           <p className="glass inline-flex items-center gap-2 rounded-full px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.18em] text-gold-light sm:text-xs">
             <span className="relative flex h-2 w-2">
@@ -51,7 +49,7 @@ export function Hero() {
           </h1>
 
           {/* Verified 5.0 proof */}
-          <div className="mt-7 flex flex-col items-center gap-2 xl:items-start" aria-label={t.hero.trust1}>
+          <div className="mt-7 flex flex-col items-center gap-2 lg:items-start" aria-label={t.hero.trust1}>
             <div className="flex items-center gap-3">
               <Stars value={5} className="h-5 w-5" />
               <span className="text-lg font-black tracking-wide text-cream" dir="ltr">
@@ -63,13 +61,13 @@ export function Hero() {
             </span>
           </div>
 
-          <p className="mt-6 max-w-2xl text-base leading-relaxed text-cream/80 sm:text-lg xl:max-w-xl">
+          <p className="mt-6 max-w-2xl text-base leading-relaxed text-cream/80 sm:text-lg lg:max-w-xl">
             {t.hero.subtitle}
           </p>
 
           {/* CTAs — RESERVE YOUR TABLE (primary) · DISCOVER XO (secondary)
               Localised: the primary opens the one booking line on WhatsApp. */}
-          <div className="mt-9 flex flex-col items-center gap-3 sm:flex-row sm:flex-wrap sm:justify-center xl:justify-start">
+          <div className="mt-9 flex flex-col items-center gap-3 sm:flex-row sm:flex-wrap sm:justify-center lg:justify-start">
             <WhatsAppButton size="lg" message={WA_MESSAGES.vip} label={p.hero.reserve} />
             <a
               href="#entrance"
@@ -89,7 +87,7 @@ export function Hero() {
           </div>
 
           {/* Trust badges */}
-          <ul className="mt-10 flex flex-wrap items-center justify-center gap-2.5 xl:justify-start">
+          <ul className="mt-10 flex flex-wrap items-center justify-center gap-2.5 lg:justify-start">
             {badges.map((b) => (
               <li
                 key={b.label}
