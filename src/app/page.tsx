@@ -11,11 +11,14 @@ import {
 } from "@/lib/jsonld";
 import { Header } from "@/components/club/header";
 import { Hero } from "@/components/club/hero";
+import { EntranceSection } from "@/components/club/entrance";
 import { TrustBar } from "@/components/club/trust-bar";
 import { TonightAtXo } from "@/components/club/tonight";
 import { Differentiators } from "@/components/club/differentiators";
 import { Music } from "@/components/club/music";
 import { Pricing } from "@/components/club/pricing";
+import { ExperiencesSection } from "@/components/club/experiences";
+import { EntertainmentSection } from "@/components/club/entertainment";
 import { EventsSection, type EventCard } from "@/components/club/events";
 import { SilosSection } from "@/components/club/silos";
 import { HomeBlogBand } from "@/components/club/home-blog-band";
@@ -105,8 +108,9 @@ export default async function Home() {
       <Header />
 
       <main className="flex-1">
-        {/* LAYER 1 — THE ENTRANCE (hook + trust) */}
+        {/* LAYER 1 — THE ENTRANCE (full-screen video hero + approved entrance photo) */}
         <Hero />
+        <EntranceSection />
         <TrustBar />
 
         {/* TONIGHT AT XO — dynamic placeholders */}
@@ -119,8 +123,14 @@ export default async function Home() {
         {/* VIP TABLES & BOTTLE SERVICE */}
         <Pricing />
 
+        {/* VIP & EXPERIENCES — 5 slots, each dimension-preserving */}
+        <ExperiencesSection />
+
         {/* UPCOMING EXPERIENCES (management-fed; elegant placeholder empty state) */}
         <EventsSection events={events} />
+
+        {/* ENTERTAINMENT — 6 prepared performer slots (unpublished until approved) */}
+        <EntertainmentSection />
 
         {/* LAYER 2 — THE CORRIDORS (7 SEO silos as on-page authority hubs) */}
         <SilosSection />

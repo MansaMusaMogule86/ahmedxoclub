@@ -29,6 +29,7 @@ export function Header({ base = "" }: { base?: string }) {
     { href: `${base}#tonight`, label: t.nav.tonight },
     { href: `${base}#experience`, label: t.nav.experience },
     { href: `${base}#tables`, label: t.nav.tables },
+    { href: `${base}#entertainment`, label: isAr ? "الفنانون" : "Entertainment" },
     { href: `${base}#guides`, label: t.nav.guides },
     { href: `${base}#reviews`, label: t.nav.reviews },
     { href: `${base}#location`, label: t.nav.location },
@@ -54,7 +55,9 @@ export function Header({ base = "" }: { base?: string }) {
           className="flex shrink-0 items-center"
           aria-label="XO Club Dubai — home"
         >
-          <BrandLogo className="h-[50px] sm:h-[54px]" priority />
+          {/* Kept deliberately inside the bar (never dominating it) with a
+              subtle, non-looping hover treatment. */}
+          <BrandLogo className="h-10 sm:h-11" priority hover sizes="120px" />
           <span className="sr-only">
             {isAr
               ? "إكس أو كلوب دبي — وجهة السهر الخليجي والعربي"

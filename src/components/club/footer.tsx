@@ -16,6 +16,7 @@ export function Footer({ base = "" }: { base?: string }) {
     { href: `${base}#tonight`, label: t.nav.tonight },
     { href: `${base}#experience`, label: t.nav.experience },
     { href: `${base}#tables`, label: t.nav.tables },
+    { href: `${base}#entertainment`, label: isAr ? "الفنانون" : "Entertainment" },
     { href: `${base}#events`, label: t.nav.events },
     { href: `${base}#guides`, label: t.nav.guides },
     { href: `${base}#reviews`, label: t.nav.reviews },
@@ -50,7 +51,7 @@ export function Footer({ base = "" }: { base?: string }) {
           {/* Brand */}
           <div>
             <div className="flex flex-col gap-3">
-              <BrandLogo className="h-[76px] sm:h-[84px]" />
+              <BrandLogo className="h-[68px] sm:h-[76px]" sizes="180px" />
               <span className="text-[10px] font-semibold uppercase tracking-[0.42em] text-gold/80">
                 {isAr ? "إكس أو كلوب · دبي" : "Dubai · Business Bay"}
               </span>

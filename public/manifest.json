@@ -12,13 +12,13 @@
   "categories": ["nightlife", "entertainment", "food"],
   "icons": [
     {
-      "src": "/images/xo-club-logo-square.png",
+      "src": "/images/branding/xo-logo-square.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "/images/xo-club-logo-square.png",
+      "src": "/images/branding/xo-logo-square.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable"

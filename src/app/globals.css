@@ -4,19 +4,27 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme {
-  /* XO Club Dubai brand palette — obsidian × royal gold × deep crimson */
+  /* XO Club Dubai brand palette — obsidian × royal gold × deep crimson
+     Aligned with the approved branding tokens:
+     primary bg #080808 · secondary bg #151515 · premium gold #D4AF37 ·
+     warm gold #C6A667 · primary text #F5F2EB · muted text #A6A29B ·
+     accent red #B91C32. Gold stays an ACCENT, never a full-section wash. */
   --color-gold: #d4af37;
   --color-gold-light: #f0d98c;
   --color-gold-dark: #8c6d1f;
+  --color-gold-warm: #c6a667;
   --color-crimson: #8b1a2b;
   --color-crimson-bright: #b3243a;
   --color-crimson-deep: #4a0e18;
+  --color-red-accent: #b91c32;
   --color-amber-warm: #f59e0b;
-  --color-night: #08080a;
-  --color-night-soft: #101014;
+  --color-night: #080808;
+  --color-night-soft: #151515;
   --color-night-card: #13131a;
+  --color-surface-2: #151515;
   --color-whatsapp: #25d366;
-  --color-cream: #f5f1e8;
+  --color-cream: #f5f2eb;
+  --color-muted-text: #a6a29b;
 }
 
 @theme inline {
@@ -64,18 +72,18 @@
 /* Permanent dark luxury theme */
 :root {
   --radius: 0.75rem;
-  --background: #08080a;
-  --foreground: #f5f1e8;
-  --card: #13131a;
-  --card-foreground: #f5f1e8;
-  --popover: #101014;
-  --popover-foreground: #f5f1e8;
+  --background: #080808;
+  --foreground: #f5f2eb;
+  --card: #151515;
+  --card-foreground: #f5f2eb;
+  --popover: #151515;
+  --popover-foreground: #f5f2eb;
   --primary: #d4af37;
   --primary-foreground: #0a0a0b;
-  --secondary: #1d1216;
+  --secondary: #151515;
   --secondary-foreground: #e9dcba;
-  --muted: #16161c;
-  --muted-foreground: #a8a29e;
+  --muted: #151515;
+  --muted-foreground: #a6a29b;
   --accent: #f59e0b;
   --accent-foreground: #0a0a0b;
   --destructive: #dc2626;
@@ -335,9 +343,84 @@
   animation: bounce-soft 1.8s ease-in-out infinite;
 }
 
+/* ---------- Approved-photography placeholder ----------
+   A dimension-preserving empty slot: charcoal panel, gold hairline, faint
+   geometric grid and the XO monogram. It NEVER shows a broken image, a
+   development filename or an "image missing" message on the public site.
+   The parent sets the aspect ratio, so dropping in the real photo later
+   cannot shift the layout. */
+.xo-media-placeholder {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background:
+    linear-gradient(160deg, rgba(212, 175, 55, 0.07) 0%, rgba(21, 21, 21, 0.92) 45%, #080808 100%),
+    #151515;
+  border: 1px solid rgba(212, 175, 55, 0.22);
+}
+.xo-media-placeholder::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(212, 175, 55, 0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(212, 175, 55, 0.055) 1px, transparent 1px);
+  background-size: 46px 46px;
+  opacity: 0.55;
+  pointer-events: none;
+}
+.xo-media-placeholder__glyph {
+  font-family: var(--font-cinzel), Georgia, serif;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  color: rgba(212, 175, 55, 0.55);
+  line-height: 1;
+}
+.xo-media-placeholder__label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: rgba(245, 242, 235, 0.42);
+}
+
+/* ---------- Hero video / readable-text helpers ---------- */
+/* Keeps hero copy legible from the first painted frame, before the video's
+   first frame decodes. */
+.text-shadow-hero {
+  text-shadow: 0 2px 28px rgba(0, 0, 0, 0.72), 0 1px 3px rgba(0, 0, 0, 0.55);
+}
+/* Landscape viewports show the portrait hero video contained (no cropping),
+   so the side bands and the scrim keep the composition cinematic. */
+.hero-stage-bg {
+  background:
+    radial-gradient(ellipse at 50% 45%, rgba(212, 175, 55, 0.07) 0%, transparent 62%),
+    #080808;
+}
+
+/* ---------- Interaction ---------- */
+.hover-lift {
+  transition: transform 0.32s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.32s ease, border-color 0.32s ease;
+}
+.hover-lift:hover {
+  transform: translateY(-3px);
+}
+.logo-hover {
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), filter 0.35s ease, opacity 0.35s ease;
+}
+.logo-hover:hover {
+  transform: scale(1.035);
+  filter: brightness(1.12) drop-shadow(0 4px 18px rgba(212, 175, 55, 0.28));
+}
+
 @media (prefers-reduced-motion: reduce) {
   .animate-kenburns, .animate-marquee, .animate-floaty, .animate-bounce-soft,
   .animate-pulse-ring, .animate-pulse-gold, .animate-shimmer, .xo-placeholder-card::after {
     animation: none !important;
+  }
+  .hover-lift:hover, .logo-hover:hover {
+    transform: none !important;
   }
 }

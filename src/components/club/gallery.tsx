@@ -12,7 +12,8 @@ const SHOTS = [
   "/images/dj.png",
   "/images/crowd.png",
   "/images/bottle-service.png",
-  "/images/entrance.png",
+  // Approved entrance photograph (replaces the retired /images/entrance.png).
+  "/images/entrance/xo-entrance.webp",
   "/images/private-events.png",
   "/images/hero.png",
 ];

@@ -26,7 +26,7 @@ export function nightClubSchema() {
       `${URL}/images/vip-table.png`,
       `${URL}/images/interior.png`,
     ],
-    logo: `${URL}/images/xo-club-logo-square.png`,
+    logo: `${URL}/images/branding/xo-logo-square.png`,
     priceRange: "$$$$",
     currenciesAccepted: "AED",
     paymentAccepted: "Cash, Credit Card, WhatsApp Booking",
@@ -82,7 +82,7 @@ export function organizationSchema() {
     name: BRAND.legalName,
     alternateName: BRAND.shortName,
     url: URL,
-    logo: `${URL}/images/xo-club-logo-square.png`,
+    logo: `${URL}/images/branding/xo-logo-square.png`,
     telephone: BRAND.phoneRaw,
     contactPoint: {
       "@type": "ContactPoint",

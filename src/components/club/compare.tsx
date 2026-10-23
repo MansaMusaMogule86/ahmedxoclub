@@ -26,7 +26,7 @@ export function Compare() {
             <div className="grid grid-cols-[1fr] sm:grid-cols-[0.9fr_1.1fr_1fr] border-b border-gold/20 bg-night-soft/70">
               <div className="hidden sm:block" aria-hidden="true" />
               <div className="flex items-center gap-3 border-gold/20 px-5 py-4 sm:border-e">
-                <BrandLogo className="h-10 shrink-0" />
+                <BrandLogo className="h-9 shrink-0" sizes="90px" />
                 <p className="text-sm font-black uppercase tracking-[0.14em] text-gold-light">
                   {t.compare.colXo}
                 </p>
