@@ -99,11 +99,20 @@ export const metadata: Metadata = {
   },
   manifest: "/manifest.json",
   icons: {
+    /*
+      Tab/bookmark/app icons — every one of them is the approved AHMED XO CLUB
+      crown mark (see scripts/generate-icons.mjs). The old hand-made crescent
+      moon SVG is gone: a real SVG can never win against a raster for a
+      photorealistic gold logo, and SVG icons take precedence in Chrome.
+      /favicon.ico is served from the app router (src/app/favicon.ico).
+    */
     icon: [
-      { url: "/images/branding/xo-logo-square.png", sizes: "512x512", type: "image/png" },
-      { url: "/icon.svg", type: "image/svg+xml" },
+      { url: "/images/branding/favicon-16.png", sizes: "16x16", type: "image/png" },
+      { url: "/images/branding/favicon-32.png", sizes: "32x32", type: "image/png" },
+      { url: "/images/branding/favicon-48.png", sizes: "48x48", type: "image/png" },
+      { url: "/images/branding/icon-512.png", sizes: "512x512", type: "image/png" },
     ],
-    apple: "/images/branding/xo-logo-square.png",
+    apple: { url: "/images/branding/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
   },
   category: "nightlife",
 };

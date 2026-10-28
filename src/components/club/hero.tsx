@@ -5,7 +5,6 @@ import { useLanguage } from "@/lib/i18n";
 import { dictionaries } from "@/lib/content";
 import { premiumCopy } from "@/lib/premium";
 import { WA_MESSAGES } from "@/lib/brand";
-import { GoldParticles } from "@/components/club/gold-particles";
 import { HeroVideo } from "@/components/club/hero-video";
 import { WhatsAppButton } from "@/components/club/ui-bits";
 
@@ -17,7 +16,6 @@ export function Hero() {
   return (
     <section id="top" className="relative flex min-h-[100svh] items-end overflow-hidden" aria-label="XO Club Dubai">
       <HeroVideo />
-      <GoldParticles className="absolute inset-0 h-full w-full" />
 
       {/* Eyebrow — pinned to top */}
       <div className="absolute top-28 left-0 right-0 z-10 flex justify-center px-6 sm:px-10 lg:px-16">

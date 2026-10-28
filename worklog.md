@@ -233,3 +233,23 @@ Work Log:
 Stage Summary:
 - No competitor is named anywhere public, no comparison table remains, no superiority claim about a named venue remains, and no page publishes an invented review. Retired URLs are 410 Gone; sources are archived out of the served tree and were not deleted.
 - NOT DEPLOYED: changes are committed locally only. Do not push to origin/main (and therefore do not trigger a production deploy) until the client approves.
+
+---
+
+Task ID: 6
+Agent: main
+Task: Brand icon fix — remove the crescent-moon favicon and regenerate every icon from the AHMED XO CLUB logo; drop the drifting gold dots from the hero
+
+Work Log:
+- ROOT CAUSE: src/app/icon.svg was a hand-made crescent moon + star. The Next app-router icon convention served it at /icon.svg, and Chrome always prefers an SVG icon over PNG entries, so the crescent won the tab even though metadata.icons already pointed at the crown mark. The PNG could never win while that file existed.
+- GENERATOR: new scripts/generate-icons.mjs (npm run icons) — renders the approved mark public/images/branding/xo-logo-square.png with sharp: trims the transparent padding (446x390 of 512), scales it and composites it centred on the brand plate #08080A. Outputs favicon-16/32/48.png, apple-touch-icon.png (180), icon-192.png, icon-512.png, icon-maskable-512.png (mark kept inside the maskable safe zone, inset 0.58) and a real multi-size src/app/favicon.ico (16/32/48 PNG-in-ICO, hand-packed header, 5.2 KB). Nothing is drawn by hand any more — the icon set is reproducible from the logo in one command.
+- REMOVED the stale vector art, none of it referenced after the rewiring and none of it the approved logo: src/app/icon.svg (the crescent), public/icon.svg (hand-made "XO" tile) and public/logo.svg (hand-made lockup).
+- REWIRED: layout.tsx metadata.icons = 16/32/48/512 PNG + apple-touch-icon 180 (no SVG entry left, so nothing can outrank the logo); public/manifest.json = icon-192/512 (any) + icon-maskable-512 (maskable) + apple-touch-icon, and the 1344x768 non-square /images/hero.png "icon" entry (not usable as an app icon) dropped.
+- HERO: removed the GoldParticles canvas (import + usage) from src/components/club/hero.tsx — that canvas was the drifting gold dust over the video. The same canvas is intentionally KEPT in the final CTA band, which the request did not cover.
+- VERIFICATION: `tsc --noEmit` clean except the 2 pre-existing examples/ websocket errors; `eslint .` reports only the 3 pre-existing set-state-in-effect errors in untouched files (booking-section.tsx, ui/carousel.tsx, use-hooks/use-mobile.ts); `next build` exit 0 with 24/24 static pages, .next/server/app/favicon.ico emitted (5,372 B) and no /icon.svg route left. Live probe of the standalone production server: / = 200 with <link rel=icon> = favicon.ico(48) + 16/32/48/512 PNG + apple-touch-icon(180) and ZERO occurrences of icon.svg / crescent in the HTML; only ONE <canvas> left on the page (the CTA one, not the hero); /favicon.ico 200 image/x-icon 5372 B; all 7 branding icon files 200 image/png; /manifest.json 200; /icon.svg 404 (retired).
+
+Stage Summary:
+- The tab, bookmark, search-result and home-screen icon is now the AHMED XO CLUB crown mark at every size, generated from the approved asset by `npm run icons` — no hand-drawn placeholder art is left anywhere in the icon pipeline.
+- The hero is a clean video plate again: no floating golden dots. The final CTA keeps its dust.
+- Browsers and crawlers cache favicons hard; a hard refresh (Ctrl/Cmd+Shift+R) or a fresh profile shows the new mark immediately. /icon.svg now 404s by design — update any external bookmark of it.
+

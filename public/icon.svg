@@ -1,6 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="14" fill="#08080A"/>
-  <rect x="2.5" y="2.5" width="59" height="59" rx="12" fill="none" stroke="#D4AF37" stroke-width="2" opacity="0.75"/>
-  <text x="33" y="41" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="24" font-weight="bold" fill="#D4AF37" letter-spacing="3">XO</text>
-  <path d="M32 48 L35 51 L32 54 L29 51 Z" fill="#B3243A"/>
-</svg>
